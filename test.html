@@ -6,13 +6,18 @@
     <title>Video Testimonial Carousel</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
     <style>
+
         :root {
             --PrimaryColor: #01579B;
             --SecondaryColor: #00BCD4;
             --AccentColor: #FF7043;
             --BackgroundColor: #ffffff;
         }
+        .parent-testimonial{
+
+        
 
         .testimonial-section {
             background: var(--BackgroundColor);
@@ -231,9 +236,11 @@
                 padding: 20px;
             }
         }
+    }
     </style>
 </head>
 <body>
+    <div class="parent-testimonial">
     <section class="testimonial-section">
         <div class="testimonial-container">
             <div class="owl-carousel testimonial-carousel">
@@ -305,7 +312,7 @@
             </div>
         </div>
     </section>
-
+</div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
