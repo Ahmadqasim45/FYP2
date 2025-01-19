@@ -481,7 +481,8 @@ button:hover {
 /* partner section */
 
 
-.section-partners {
+.section-partners
+ {
   display: grid;
   place-items: center;
 }
