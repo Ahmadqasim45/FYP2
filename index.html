@@ -6,13 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" defer></script>
-
-
-  <link rel="stylesheet" href="./Assets/css/style.css">
+ <link rel="stylesheet" href="./Assets/css/style.css">
   <link rel="stylesheet" href="./Assets/css/work-section.css">
-
-
-  
   <title>Organ Donation</title>
 </head>
 
@@ -21,89 +16,12 @@
 <!-- Mobile/Tablet Navbar -->
 <!-- <div class="parent-nav"> -->
   <!-- Mobile Navbar -->
-  <nav class="custom-navbar navbar navbar-expand-lg p-3 d-lg-none sticky-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <span>Organ</span><span class="text-secondary">Do</span
-        ><span class="text-accent">nation</span>
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        aria-controls="mobileNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-        id="navbarToggler"
-      >
-        <i id="barsIcon" class="fa-solid fa-bars"></i>
-        <i id="crossIcon" class="fa-solid fa-x" style="display: none;"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="mobileNav">
-        <ul class="navbar-nav ms-auto justify-content-center align-items-center">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Become a Hospital</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Become a Donor</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Become a Recipient</a>
-          </li>
-          <li class="nav-item">
-            <a
-              class="btn btn-donor w-100 mt-2 px-4 py-2 rounded-pill ms-0 nav-link"
-              >Sign In</a
-            >
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <div id="header"></div>
 
-  <!-- Desktop Navbar -->
-  <nav class="custom-navbar navbar navbar-expand-lg p-3 d-none d-lg-flex sticky-top">
-    <div class="container-fluid d-flex justify-content-between align-items-center">
-      <a class="navbar-brand" href="#">
-        <span>Organ</span><span class="text-secondary">Do</span
-        ><span class="text-accent">nation</span>
-      </a>
-      <ul class="navbar-nav mx-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Become a Hospital</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Become a Donor</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Become a Recipient</a>
-        </li>
-      </ul>
-      <button class="btn btn-donor px-4 py-2 rounded-pill ms-0">Sign In</button>
-    </div>
-  </nav>
-</div>
 
 
 <!-- Hero Section -->
- <div class="parent-hero">
+ <div class="parent-hero ">
 <div class="custom-hero-section d-sm-flex align-items-center justify-content-between " style="height: 100vh;">
   <div class="custom-hero-headline col-md-4 mx-auto mb-4 mb-sm-0 d-flex align-items-center justify-content-center flex-column text-center">
     <span class="custom-hero-subheadline">Save Lives, Donate Organs</span>
@@ -388,39 +306,7 @@
     </div>
   </div>
 </div>
-
-  
-
-
-
-
-
-
-     
-
-
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const navbarToggler = document.querySelector(".navbar-toggler");
-    const barsIcon = document.getElementById("barsIcon");
-    const crossIcon = document.getElementById("crossIcon");
-
-    // Toggle the navbar and icons when the navbar button is clicked
-    navbarToggler.addEventListener("click", function() {
-      // Toggle the navbar collapse
-      const navbarCollapse = document.getElementById("mobileNav");
-      navbarCollapse.classList.toggle("show");
-
-      // Toggle the icons (bars and cross)
-      if (navbarCollapse.classList.contains("show")) {
-        barsIcon.style.display = "none";
-        crossIcon.style.display = "block";
-      } else {
-        barsIcon.style.display = "block";
-        crossIcon.style.display = "none";
-      }
-    });
-  });
 
   // video button
   // Function to open the video overlay and embed video
@@ -580,6 +466,24 @@ faqItems.forEach(item => {
     }
   });
 });
+
+//  Navbar sections 
+
+
+       // Load Header.html into the 'header' div
+       fetch('Header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to load Header.html');
+                }
+                return response.text();
+            })
+            .then(html => {
+                document.getElementById('header').innerHTML = html;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
 
   
 </script>

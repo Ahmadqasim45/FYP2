@@ -5,11 +5,11 @@
 
 
 :root {
-  --PrimaryColor: #01579B;
-  --SecondaryColor: #00BCD4;
-  --AccentColor: #FF7043;
-  --BackgroundColor: #ffffff;
-  --TextColor: #333333;
+  --PrimaryColor: #B71C1C; /* Deep red for blood */
+  --SecondaryColor: #880E4F; /* Dark maroon for organs */
+  --AccentColor: #FF5252; /* Bright red as an accent */
+  --BackgroundColor: #FBE9E7; /* Soft pinkish-beige for a gentle background */
+  --TextColor: #212121; /* Dark gray for readability */
   --primary-font-family: 'Poppins', sans-serif;
   --secondary-font-family: 'Roboto', sans-serif;
   --poppins-heading-font-weight: 600;
@@ -633,6 +633,9 @@ h1 {
     min-height: 200px;
     width: 100%;
     clip-path: none;
+  }
+  .parent-hero{
+    margin-top: 100px;
   }
 }
 
