@@ -10,9 +10,9 @@
 
   <link rel="stylesheet" href="./Assets/css/style.css">
   <link rel="stylesheet" href="./Assets/css/work-section.css">
-  
 
-  <!-- <link rel="stylesheet" href="./Assets/css/Testimonialcarousel.css"> -->
+
+  
   <title>Organ Donation</title>
 </head>
 
@@ -105,10 +105,10 @@
 <!-- Hero Section -->
  <div class="parent-hero">
 <div class="custom-hero-section d-sm-flex align-items-center justify-content-between " style="height: 100vh;">
-  <div class="custom-hero-headline col-md-4 mx-auto mb-4 mb-sm-0">
+  <div class="custom-hero-headline col-md-4 mx-auto mb-4 mb-sm-0 d-flex align-items-center justify-content-center flex-column text-center">
     <span class="custom-hero-subheadline">Save Lives, Donate Organs</span>
     <h1 class="custom-hero-title">Become a <span class="highlight">Hero and Save a Life</span></h1>
-    <a href="#" class="custom-hero-button w-100 mt-2 px-4 py-2 rounded-pill ms-0">Donate Now</a>
+    <a href="#" class="custom-hero-button w-50 mt-2 px-4 py-2 rounded-pill ms-0">Donate Now</a>
   </div>
 
   <div class="custom-hero-image col-md-8 h-100 clipped">
@@ -315,7 +315,128 @@
 <h1 class="text-center">Our Success Stories</h1>
 <div id="testimonial-container"></div>
 
+
+
+
+<div class="parent-container-faq">
+  <h1 class="text-center">Faqs</h1>
+  <div class="parent-faq">
+    <div class="faq-container">
+      <div class="faq-item">
+        <div class="faq-question">
+          How has our platform helped individuals in need?
+          <span class="arrow">▶</span>
+        </div>
+        <div class="faq-answer">
+          Our platform has connected over 10,000 individuals with life-saving donations and critical resources.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          What makes our approach unique?
+          <span class="arrow">▶</span>
+        </div>
+        <div class="faq-answer">
+          We combine advanced technology with a personalized approach to ensure every case receives the attention it deserves.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          Can you share a story of impact?
+          <span class="arrow">▶</span>
+        </div>
+        <div class="faq-answer">
+          A recent case involved matching a critical organ donor with a recipient within 24 hours, saving a life through quick action.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          How do we ensure transparency in our services?
+          <span class="arrow">▶</span>
+        </div>
+        <div class="faq-answer">
+          We provide detailed progress updates, ensure traceability, and allow users to track their impact directly.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          What role do donors play in our success?
+          <span class="arrow">▶</span>
+        </div>
+        <div class="faq-answer">
+          Donors are at the heart of our success, enabling us to create a network of trust and lifesaving resources.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          How do we scale our efforts for a wider reach?
+          <span class="arrow">▶</span>
+        </div>
+        <div class="faq-answer">
+          By partnering with global organizations and leveraging technology, we ensure scalable and sustainable impact.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          What feedback have we received from our users?
+          <span class="arrow">▶</span>
+        </div>
+        <div class="faq-answer">
+          Users praise our platform for its simplicity, transparency, and meaningful outcomes in creating life-changing connections.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
   
+<footer class="footer">
+  <div class="footer-container">
+    <!-- About Section -->
+    <div class="footer-about">
+      <h2>Organ Donation System</h2>
+      <p>Saving lives by connecting donors and recipients through technology.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#donate">Become a Donor</a></li>
+        <li><a href="#faq">FAQs</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#privacy">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Information -->
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <ul>
+        <li>Email: <a href="mailto:info@organdonationsystem.com">info@organdonationsystem.com</a></li>
+        <li>Phone: <a href="tel:+18001234567">+1 800 123 4567</a></li>
+        <li>Address: 123 Donation Avenue, Life City</li>
+      </ul>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="footer-social">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+        <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+        <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+        <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Bottom Section -->
+  <div class="footer-bottom">
+    <p>&copy; 2025 Organ Donation System. All rights reserved.</p>
+  </div>
+</footer>
 
 
 
@@ -468,7 +589,7 @@ window.addEventListener("resize", () => {
 });
 
 
-fetch('test.html')
+fetch('testimonial.html')
       .then(response => response.text())
       .then(html => {
           document.getElementById('testimonial-container').innerHTML = html;
@@ -477,7 +598,35 @@ fetch('test.html')
           console.error('Error loading testimonial carousel:', error);
       });
 
+      fetch('Faqs.html')
+      .then(response => response.text())
+      .then(html => {
+          document.getElementById('faq-container').innerHTML = html;
+      })
+      .catch(error => {
+          console.error('Error loading testimonial carousel:', error);
+      });
+      const faqItems = document.querySelectorAll('.faq-item');
 
+faqItems.forEach(item => {
+  const question = item.querySelector('.faq-question');
+  const answer = item.querySelector('.faq-answer');
+  const arrow = item.querySelector('.arrow');
+
+  question.addEventListener('click', () => {
+    const isOpen = answer.classList.contains('open');
+
+    // Close all open answers
+    document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+    document.querySelectorAll('.arrow').forEach(a => a.classList.remove('open'));
+
+    // Toggle current item
+    if (!isOpen) {
+      answer.classList.add('open');
+      arrow.classList.add('open');
+    }
+  });
+});
 
   
 </script>

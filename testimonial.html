@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Testimonial Carousel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    
+</head>
+<body>
+    <div class="parent-testimonial">
+        
+    <section class="testimonial-section">
+        <div class="testimonial-container">
+            
+            <div class="owl-carousel testimonial-carousel">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-item">
+                    <div class="video-wrapper">
+                        <a class="video-play-button" href="https://www.youtube.com/embed/hXAdt5w3sPQ" data-toggle="modal" data-target="#video-modal-1">
+                            <span></span>
+                        </a>
+                        <iframe src="/api/placeholder/560/315" title="Client Testimonial 1"></iframe>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"The product completely transformed our business processes. The efficiency gains.p>
+                        <div class="client-info">
+                            <div class="client-image">
+                                <img src="./Assets/images/three.avif" alt="John Doe">
+                            </div>
+                            <div class="client-details">
+                                <h4 class="client-name">John Doe</h4>
+                                <p class="client-position">CEO, Tech Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-item">
+                    <div class="video-wrapper">
+                        <a class="video-play-button" href="https://www.youtube.com/embed/hXAdt5w3sPQ" data-toggle="modal" data-target="#video-modal-2">
+                            <span></span>
+                        </a>
+                        <iframe src="/api/placeholder/560/315" title="Client Testimonial 2"></iframe>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"Implementation was smooth and the results were immediate. Highly recommended!"</p>
+                        <div class="client-info">
+                            <div class="client-image">
+                                <img src="./Assets/images/testimonial1.avif" alt="Jane Smith">
+                            </div>
+                            <div class="client-details">
+                                <h4 class="client-name">Jane Smith</h4>
+                                <p class="client-position">Marketing Director, Creative Co</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-item">
+                    <div class="video-wrapper">
+                        <a class="video-play-button" href="https://www.youtube.com/embed/hXAdt5w3sPQ" data-toggle="modal" data-target="#video-modal-3">
+                            <span></span>
+                        </a>
+                        <iframe src="/api/placeholder/560/315" title="Client Testimonial 3"></iframe>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"Outstanding support team and excellent product quality. We couldn't be happier!"</p>
+                        <div class="client-info">
+                            <div class="client-image">
+                                <img src="./Assets/images/testimonial2.jpeg" alt="Mike Johnson">
+                            </div>
+                            <div class="client-details">
+                                <h4 class="client-name">Mike Johnson</h4>
+                                <p class="client-position">Operations Manager, Global Inc</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+       $(document).ready(function () {
+    $('.testimonial-carousel').owlCarousel({
+        loop: true,
+        margin: 30,
+        nav: true,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        smartSpeed: 1000,
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 2
+            },
+            1024: {
+                items: 3
+            }
+        }
+    });
+});
+    </script>
+</body>
+</html>

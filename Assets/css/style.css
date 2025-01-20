@@ -1,4 +1,9 @@
 @import url('./Testimonialcarousel.css');
+@import url('./work-section.css');
+@import url('./faqs.css');
+@import url('./footer.css');
+
+
 :root {
   --PrimaryColor: #01579B;
   --SecondaryColor: #00BCD4;
@@ -20,6 +25,7 @@ body {
   overflow-x: hidden; /* Add this line to hide horizontal overflow */
 }
 
+/* Default Styles */
 h1, h2, h3 {
   font-family: var(--primary-font-family);
   font-weight: var(--poppins-heading-font-weight);
@@ -45,6 +51,54 @@ button {
 button:hover {
   background-color: var(--AccentColor);
   color: var(--BackgroundColor);
+}
+
+/* Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;  /* Slightly smaller size for mobile */
+  }
+
+  h2 {
+    font-size: 1.6rem;  /* Smaller size for subheadings */
+  }
+
+  h3 {
+    font-size: 1.4rem;  /* Smallest for h3 */
+  }
+
+  a {
+    font-size: 14px;  /* Adjust link size */
+  }
+
+  button {
+    padding: 0.4rem 0.8rem;  /* Adjust button size */
+    font-size: 14px;  /* Adjust button text size */
+  }
+}
+
+/* Tablet Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;  /* Adjust h1 size for tablet */
+  }
+
+  h2 {
+    font-size: 1.75rem;  /* Adjust h2 size for tablet */
+  }
+
+  h3 {
+    font-size: 1.5rem;  /* Adjust h3 size for tablet */
+  }
+
+  a {
+    font-size: 15px;  /* Slightly larger text for better readability */
+  }
+
+  button {
+    padding: 0.45rem 0.9rem;  /* Slight adjustment for button */
+    font-size: 15px;  /* Adjust button text size */
+  }
 }
 
 /* Navbar Styling */

@@ -1,20 +1,20 @@
 /* Custom Properties */
 :root {
-    --od-primary: #01579B;
-    --od-secondary: #00BCD4;
-    --od-accent: #FF7043;
-    --od-bg: #ffffff;
-    --od-text: #333333;
-    --od-shadow: rgba(0, 0, 0, 0.1);
-    --od-gradient-1: linear-gradient(135deg, #01579B 0%, #00BCD4 100%);
-    --od-gradient-2: linear-gradient(135deg, #00BCD4 0%, #FF7043 100%);
-    --od-gradient-3: linear-gradient(135deg, #FF7043 0%, #01579B 100%);
-    --od-filter-shadow: drop-shadow(0 10px 15px rgba(1, 87, 155, 0.2));
+    --PrimaryColor: #01579B;
+    --SecondaryColor: #00BCD4;
+    --AccentColor: #FF7043;
+    --BackgroundColor: #ffffff;
+    --TextColor: #333333;
+    --primary-font-family: 'Poppins', sans-serif;
+    --secondary-font-family: 'Roboto', sans-serif;
+    --poppins-heading-font-weight: 600;
+    --poppins-sub-heading-font-weight: 500;
+    --BodyText: 400;
 }
 
 /* Section Styles */
 .od-section {
-    background: var(--od-bg);
+    background: var(--BackgroundColor);
     padding: 4rem 0;
     min-height: 100vh;
 }
@@ -28,7 +28,8 @@
     padding: 0;
     list-style: none;
     margin-bottom: 3rem;
-    filter: var(--od-filter-shadow);
+    /* filter: drop-shadow(0 10px 15px rgba(1, 87, 155, 0.2)); */
+    
 }
 
 /* Navigation Item Styles */
@@ -36,23 +37,25 @@
     width: 100%; /* Full width of the container */
     max-width: 300px; /* Limit width for better appearance */
     text-align: center;
+    
 }
 
 /* Nav Links */
 .od-nav__link {
     position: relative;
-    color: var(--od-bg);
+    color: var(--PrimaryColor);
     transition: all 0.4s ease;
     border-radius: 30px;
     padding: 1rem 2rem;
     overflow: hidden;
     border: none;
-    background: var(--od-gradient-1);
+    background:var(--BackgroundColor) ; /* Solid primary color */
     font-weight: 600;
     font-size: 1.1rem;
     letter-spacing: 0.5px;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--PrimaryColor);
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
     display: block; /* Make links span full width */
 }
 
@@ -60,14 +63,16 @@
 .od-nav__link:hover,
 .od-nav__link--active {
     transform: translateY(-3px);
-    background: var(--od-gradient-3);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background: var(--PrimaryColor); /* Solid secondary color */
+    /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+     */
+     color: var(--BackgroundColor);
 }
 
 .od-nav__link--active {
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(0, 188, 212, 0.3);
-    color: var(--od-bg); /* Ensure text remains visible */
+    color: var(--BackgroundColor); /* Ensure text remains visible */
     font-weight: bold; /* Make the active tab stand out */
 }
 
@@ -83,21 +88,20 @@
 
 /* Card Styles */
 .od-card {
-    background: var(--od-bg);
+    background: var(--BackgroundColor);
     border-radius: 20px;
     transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
     position: relative;
     overflow: hidden;
     padding: 2.5rem 2rem;
     isolation: isolate;
-    animation: floatAnimation 6s ease-in-out infinite;
 }
 
 .od-card::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: var(--od-gradient-1);
+    background: var(--PrimaryColor); /* Solid primary color */
     opacity: 0.05;
     transition: all 0.5s ease;
     z-index: -1;
@@ -118,10 +122,7 @@
 .od-card__icon {
     font-size: 3.5rem;
     margin-bottom: 1.5rem;
-    background: var(--od-gradient-1);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--PrimaryColor); /* Solid primary color */
     filter: drop-shadow(0 4px 6px rgba(1, 87, 155, 0.2));
     animation: pulseAnimation 3s ease-in-out infinite;
 }
@@ -131,14 +132,11 @@
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 0.5px;
-    background: var(--od-gradient-1);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--PrimaryColor); /* Solid primary color */
 }
 
 .od-card__text {
-    color: var(--od-text);
+    color: var(--TextColor);
     font-size: 1.1rem;
     line-height: 1.6;
     margin-top: 1rem;
@@ -154,10 +152,10 @@
 
 .od-filter__input {
     padding: 0.8rem 1.5rem;
-    border: 2px solid var(--od-primary);
+    border: 2px solid var(--PrimaryColor);
     border-radius: 25px;
-    background: var(--od-bg);
-    color: var(--od-text);
+    background: var(--BackgroundColor);
+    color: var(--TextColor);
     font-size: 1rem;
     transition: all 0.3s ease;
     width: 300px;
@@ -166,16 +164,10 @@
 .od-filter__input:focus {
     outline: none;
     box-shadow: 0 0 0 3px rgba(1, 87, 155, 0.2);
-    border-color: var(--od-secondary);
+    border-color: var(--SecondaryColor);
 }
 
 /* Animations */
-@keyframes floatAnimation {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0); }
-}
-
 @keyframes pulseAnimation {
     0% { transform: scale(1); }
     50% { transform: scale(1.05); }
