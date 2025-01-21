@@ -3,15 +3,16 @@
 @import url('./faqs.css');
 @import url('./footer.css');
 @import url('./organ-donation-system.css');
+@import url('./gallery.css');
 
 
 
 :root {
-  --PrimaryColor: #ED8936 !important; /* Deep Blue for trust and professionalism */
-  --SecondaryColor: #48BB78 !important; /* Sage Green for life and healing */
+  --PrimaryColor: #973131 !important; /* Deep Blue for trust and professionalism */
+  --SecondaryColor: #292929 !important; /* Sage Green for life and healing */
   --BackgroundColor: white !important; /* Off-White for a clean background */
-  --TextColor: #2D3748; /* Dark gray for readability */
-  /* --HeadingColor: #1A365D; Darker blue for headings */
+  --TextColor: #434343; /* Dark gray for readability  text*/
+  --HeadingColor: var(--SecondaryColor); 
   --primary-font-family: 'Poppins', sans-serif;
   --secondary-font-family: 'Roboto', sans-serif;
   --poppins-heading-font-weight: 600;
@@ -41,6 +42,7 @@ a {
   color: var(--SecondaryColor) ;
   text-decoration: none;
   transition: color 0.3s ease-in-out;
+  text-decoration: none !important;
 }
 
 a:hover {
@@ -148,6 +150,7 @@ p {
   font-weight: var(--poppins-heading-font-weight);
   font-size: 1.5rem;
   color: var(--PrimaryColor);
+  margin-left: 0px;
 }
 
 .navbar-brand span {
@@ -197,28 +200,28 @@ p {
 }
 
  .btn-donor {
-  border: 1px solid var(--PrimaryColor);
-  color: var(--PrimaryColor);
-  font-family: var(--primary-font-family);
-  font-weight: var(--poppins-heading-font-weight);
+  border: 1px solid var(--PrimaryColor) !important;
+  color: var(--PrimaryColor) !important;
+  font-family: var(--primary-font-family) !important;
+  font-weight: var(--poppins-heading-font-weight) !important;
   transition: all 0.3s ease-in-out;
 }
 
 .btn-donor:hover {
-  background-color: var(--PrimaryColor);
-  color: var(--BackgroundColor);
+  background-color: var(--PrimaryColor) !important;
+  color: var(--BackgroundColor) !important;
   transform: scale(1.05);
 }
 .custom-hero-button{
-  border: 1px solid var(--PrimaryColor);
-  color: var(--PrimaryColor);
+  border: 1px solid var(--PrimaryColor)  !important;
+  color: var(--PrimaryColor) !important;
   font-family: var(--primary-font-family);
   font-weight: var(--poppins-heading-font-weight);
   transition: all 0.3s ease-in-out;
 }
 .custom-hero-button:hover {
-  background-color: var(--PrimaryColor);
-  color: var(--BackgroundColor);
+  background-color: var(--PrimaryColor) !important;
+  color: var(--BackgroundColor) !important;
   transform: scale(1.05);
 }
 

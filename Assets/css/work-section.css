@@ -1,17 +1,4 @@
-/* Custom Properties */
-:root {
-    --PrimaryColor: #2B6CB0; /* Deep Blue for trust and professionalism */
-    --SecondaryColor: #48BB78; /* Sage Green for life and healing */
-    --BackgroundColor: #F7FAFC; /* Off-White for a clean background */
-    --TextColor: #2D3748; /* Dark gray for readability */
-    --HeadingColor: #1A365D; /* Darker blue for headings */
-    --primary-font-family: 'Poppins', sans-serif;
-    --secondary-font-family: 'Roboto', sans-serif;
-    --poppins-heading-font-weight: 600;
-    --poppins-sub-heading-font-weight: 500;
-    --BodyText: 400;
-  }
-  
+
   /* Section Styles */
   .od-section {
     background: var(--BackgroundColor);
@@ -40,27 +27,29 @@
   .od-nav__link {
     position: relative;
     color: var(--PrimaryColor);
-    border: 1px solid var(--PrimaryColor);
-    background: var(--BackgroundColor);
-    font-weight: 600;
-    font-size: 1.1rem;
+    border: 1px solid var(--PrimaryColor) !important;
+    background: var(--BackgroundColor) !important ;
+    font-weight: 600 !important;
+    font-size: 1.1rem !important;
     letter-spacing: 0.5px;
     padding: 1rem 2rem;
     border-radius: 30px;
     cursor: pointer;
     transition: all 0.4s ease;
+    text-decoration: none;
+    font-weight: var(--BodyText);
   }
   
   .od-nav__link:hover,
   .od-nav__link--active {
     transform: translateY(-3px);
-    background: var(--PrimaryColor);
-    color: var(--BackgroundColor);
+    background: var(--PrimaryColor) !important;
+    color: var(--BackgroundColor) !important;
   }
   
   .od-nav__link--active {
     transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 188, 212, 0.3);
+    /* box-shadow: 0 8px 20px rgba(0, 188, 212, 0.3); */
     font-weight: bold;
   }
   
@@ -88,15 +77,16 @@
     transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
     position: relative;
     overflow: hidden;
-  }
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.68);  }
   
   .od-card::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: var(--PrimaryColor);
+    background: var(--BackgroundColor);
     opacity: 0.05;
     transition: all 0.5s ease;
+
   }
   
   .od-card:hover::before {
@@ -106,7 +96,7 @@
   
   .od-card:hover {
     transform: translateY(-15px) scale(1.02);
-    box-shadow: 0 20px 40px rgba(1, 87, 155, 0.15), 0 15px 20px rgba(0, 188, 212, 0.1);
+  
   }
   
   .od-card__icon {
@@ -121,7 +111,7 @@
     margin: 1rem 0;
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--PrimaryColor);
+    color: var(--headingColor);
   }
   
   .od-card__text {
