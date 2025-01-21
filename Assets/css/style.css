@@ -5,9 +5,9 @@
 
 
 :root {
-  --PrimaryColor: #B71C1C; /* Deep red for blood */
-  --SecondaryColor: #880E4F; /* Dark maroon for organs */
-  --AccentColor: #FF5252; /* Bright red as an accent */
+  --PrimaryColor: #008080; /* Deep red for blood */
+  --SecondaryColor: #155E95; /* Dark maroon for organs */
+  --AccentColor: #BE3144; /* Bright red as an accent */
   --BackgroundColor: #FBE9E7; /* Soft pinkish-beige for a gentle background */
   --TextColor: #212121; /* Dark gray for readability */
   --primary-font-family: 'Poppins', sans-serif;
