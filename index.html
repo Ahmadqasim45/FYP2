@@ -53,7 +53,9 @@
         </div>
       </div>
     </div>
-
+    <!-- <div id="organ-donation-section"></div> -->
+     
+    <!-- <div id="organ-donation-section"></div> -->
     <section class="od-section py-5 ">
       <div class="container-fluid">
         <!-- Navigation (Tabs) -->
@@ -106,7 +108,7 @@
             role="tabpanel"
             aria-labelledby="od-donor-tab"
           >
-            <h2 class="text-center mb-5">How to Become a Donor</h2>
+            <!-- <h2 class="text-center mb-5">How to Become a Donor</h2> -->
             <div class="od-grid">
               <!-- Step 1 -->
               <div class="od-card">
@@ -142,7 +144,7 @@
             role="tabpanel"
             aria-labelledby="od-recipient-tab"
           >
-            <h2 class="text-center mb-5">How to Become a Recipient</h2>
+            <!-- <h2 class="text-center mb-5">How to Become a Recipient</h2> -->
             <div class="od-grid">
               <!-- Step 1 -->
               <div class="od-card">
@@ -178,7 +180,7 @@
             role="tabpanel"
             aria-labelledby="od-hospital-tab"
           >
-            <h2 class="text-center mb-5">How to Become a Hospital</h2>
+            <!-- <h2 class="text-center mb-5">How to Become a Hospital</h2> -->
             <div class="od-grid">
               <!-- Step 1 -->
               <div class="od-card">
@@ -211,7 +213,7 @@
       </div>
     </section>
     <!-- statistics -->
-    <section id="statistic" class="statistic-section one-page-section ">
+    <section id="statistic" class="statistic-section one-page-section my-5">
       <div class="container-fluid">
         <div class="row text-center d-flex justify-content-between align-items-center">
           <!-- Donor Count -->
@@ -265,7 +267,7 @@
     <!-- partners -->
 
     <section class="section-partners ">
-      <h1>Our Partners</h1>
+      <!-- <h1>Our Partners</h1> -->
       <div class="slider">
         <div class="slider-items">
           <img
@@ -593,6 +595,22 @@
         .catch((error) => {
           console.error("Error:", error);
         });
+
+        fetch("Donation-system.html")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Failed to load Donation-system.html");
+    }
+    return response.text();
+  })
+  .then((html) => {
+    document.getElementById("organ-donation-section").innerHTML = html;
+  })
+  .catch((error) => {
+    console.error("Error:", error);
+  });
+
+       
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>

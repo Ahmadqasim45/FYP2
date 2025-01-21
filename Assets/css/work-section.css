@@ -1,156 +1,145 @@
 /* Custom Properties */
 :root {
-    --PrimaryColor: #01579B;
-    --SecondaryColor: #00BCD4;
-    --AccentColor: #FF7043;
-    --BackgroundColor: #ffffff;
-    --TextColor: #333333;
+    --PrimaryColor: #2B6CB0; /* Deep Blue for trust and professionalism */
+    --SecondaryColor: #48BB78; /* Sage Green for life and healing */
+    --BackgroundColor: #F7FAFC; /* Off-White for a clean background */
+    --TextColor: #2D3748; /* Dark gray for readability */
+    --HeadingColor: #1A365D; /* Darker blue for headings */
     --primary-font-family: 'Poppins', sans-serif;
     --secondary-font-family: 'Roboto', sans-serif;
     --poppins-heading-font-weight: 600;
     --poppins-sub-heading-font-weight: 500;
     --BodyText: 400;
-}
-
-/* Section Styles */
-.od-section {
+  }
+  
+  /* Section Styles */
+  .od-section {
     background: var(--BackgroundColor);
     padding: 4rem 0;
     min-height: 100vh;
-}
-
-/* Navigation Styles */
-.od-nav__list {
+    margin-top: 100px;
+  }
+  
+  /* Navigation Styles */
+  .od-nav__list {
     display: grid; /* Use grid for vertical layout */
     grid-template-columns: 1fr; /* Single column */
-    justify-items: center; /* Center align items */
+    justify-items: center;
     gap: 1.5rem; /* Spacing between items */
     padding: 0;
     list-style: none;
     margin-bottom: 3rem;
-    /* filter: drop-shadow(0 10px 15px rgba(1, 87, 155, 0.2)); */
-    
-}
-
-/* Navigation Item Styles */
-.od-nav__item {
+  }
+  
+  .od-nav__item {
     width: 100%; /* Full width of the container */
     max-width: 300px; /* Limit width for better appearance */
     text-align: center;
-    
-}
-
-/* Nav Links */
-.od-nav__link {
+  }
+  
+  .od-nav__link {
     position: relative;
     color: var(--PrimaryColor);
-    transition: all 0.4s ease;
-    border-radius: 30px;
-    padding: 1rem 2rem;
-    overflow: hidden;
-    border: none;
-    background:var(--BackgroundColor) ; /* Solid primary color */
+    border: 1px solid var(--PrimaryColor);
+    background: var(--BackgroundColor);
     font-weight: 600;
     font-size: 1.1rem;
     letter-spacing: 0.5px;
+    padding: 1rem 2rem;
+    border-radius: 30px;
     cursor: pointer;
-    border: 1px solid var(--PrimaryColor);
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-    display: block; /* Make links span full width */
-}
-
-/* Hover and Active Effect on Tab Links */
-.od-nav__link:hover,
-.od-nav__link--active {
+    transition: all 0.4s ease;
+  }
+  
+  .od-nav__link:hover,
+  .od-nav__link--active {
     transform: translateY(-3px);
-    background: var(--PrimaryColor); /* Solid secondary color */
-    /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-     */
-     color: var(--BackgroundColor);
-}
-
-.od-nav__link--active {
+    background: var(--PrimaryColor);
+    color: var(--BackgroundColor);
+  }
+  
+  .od-nav__link--active {
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(0, 188, 212, 0.3);
-    color: var(--BackgroundColor); /* Ensure text remains visible */
-    font-weight: bold; /* Make the active tab stand out */
-}
-
-/* Grid Layout */
-.od-grid {
+    font-weight: bold;
+  }
+  
+  /* Grid Layout */
+  .od-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     padding: 1rem;
     max-width: 1400px;
     margin: 0 auto;
-}
-
-/* Card Styles */
-.od-card {
+  }
+  
+  @media (max-width: 768px) {
+    .od-grid {
+      grid-template-columns: 1fr; /* Stack items vertically on smaller screens */
+    }
+  }
+  
+  /* Card Styles */
+  .od-card {
     background: var(--BackgroundColor);
     border-radius: 20px;
+    padding: 2.5rem 2rem;
     transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
     position: relative;
     overflow: hidden;
-    padding: 2.5rem 2rem;
-    isolation: isolate;
-}
-
-.od-card::before {
+  }
+  
+  .od-card::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: var(--PrimaryColor); /* Solid primary color */
+    background: var(--PrimaryColor);
     opacity: 0.05;
     transition: all 0.5s ease;
-    z-index: -1;
-}
-
-.od-card:hover::before {
+  }
+  
+  .od-card:hover::before {
     opacity: 0.15;
     transform: scale(1.1);
-}
-
-.od-card:hover {
+  }
+  
+  .od-card:hover {
     transform: translateY(-15px) scale(1.02);
-    box-shadow: 
-        0 20px 40px rgba(1, 87, 155, 0.15),
-        0 15px 20px rgba(0, 188, 212, 0.1);
-}
-
-.od-card__icon {
+    box-shadow: 0 20px 40px rgba(1, 87, 155, 0.15), 0 15px 20px rgba(0, 188, 212, 0.1);
+  }
+  
+  .od-card__icon {
     font-size: 3.5rem;
     margin-bottom: 1.5rem;
-    color: var(--PrimaryColor); /* Solid primary color */
+    color: var(--PrimaryColor);
     filter: drop-shadow(0 4px 6px rgba(1, 87, 155, 0.2));
     animation: pulseAnimation 3s ease-in-out infinite;
-}
-
-.od-card__title {
+  }
+  
+  .od-card__title {
     margin: 1rem 0;
     font-size: 1.5rem;
     font-weight: 700;
-    letter-spacing: 0.5px;
-    color: var(--PrimaryColor); /* Solid primary color */
-}
-
-.od-card__text {
+    color: var(--PrimaryColor);
+  }
+  
+  .od-card__text {
     color: var(--TextColor);
     font-size: 1.1rem;
     line-height: 1.6;
     margin-top: 1rem;
-}
-
-/* Filter Styles */
-.od-filter {
+  }
+  
+  /* Filter Styles */
+  .od-filter {
     margin-bottom: 2rem;
     display: flex;
     justify-content: center;
     gap: 1rem;
-}
-
-.od-filter__input {
+  }
+  
+  .od-filter__input {
     padding: 0.8rem 1.5rem;
     border: 2px solid var(--PrimaryColor);
     border-radius: 25px;
@@ -159,50 +148,50 @@
     font-size: 1rem;
     transition: all 0.3s ease;
     width: 300px;
-}
-
-.od-filter__input:focus {
+  }
+  
+  .od-filter__input:focus {
     outline: none;
     box-shadow: 0 0 0 3px rgba(1, 87, 155, 0.2);
     border-color: var(--SecondaryColor);
-}
-
-/* Animations */
-@keyframes pulseAnimation {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-}
-
-/* Responsive Styles */
-@media (min-width: 1200px) {
-    .od-nav__list {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
+  }
+  
+  /* Animations */
+  @keyframes pulseAnimation {
+    0% {
+      transform: scale(1);
     }
-}
-
-@media (max-width: 768px) {
-    .od-nav__list {
-        display: flex;
-        flex-direction: column; /* Make the navigation items stack vertically */
-        align-items: center;
-        justify-content: center;
+    50% {
+      transform: scale(1.05);
     }
-
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Responsive Styles */
+  @media (min-width: 1200px) {
+    .od-nav__list {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .od-nav__list {
+      flex-direction: column; /* Vertical navigation for smaller screens */
+    }
+  
     .od-nav__link {
-        padding: 0.8rem 1.5rem;
-        font-size: 1rem;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
     }
-    
-    .od-grid {
-        grid-template-columns: 1fr; /* Stack grid items vertically */
-    }
-
+  
     .od-filter__input {
-        width: 100%;
-        max-width: 300px;
+      width: 100%;
+      max-width: 300px;
     }
-}
+  }
+  

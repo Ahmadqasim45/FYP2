@@ -2,14 +2,16 @@
 @import url('./work-section.css');
 @import url('./faqs.css');
 @import url('./footer.css');
+@import url('./organ-donation-system.css');
+
 
 
 :root {
-  --PrimaryColor: #2B6CB0; /* Deep Blue for trust and professionalism */
-  --SecondaryColor: #48BB78; /* Sage Green for life and healing */
-  --BackgroundColor: #F7FAFC; /* Off-White for a clean background */
+  --PrimaryColor: #ED8936 !important; /* Deep Blue for trust and professionalism */
+  --SecondaryColor: #48BB78 !important; /* Sage Green for life and healing */
+  --BackgroundColor: white !important; /* Off-White for a clean background */
   --TextColor: #2D3748; /* Dark gray for readability */
-  --HeadingColor: #1A365D; /* Darker blue for headings */
+  /* --HeadingColor: #1A365D; Darker blue for headings */
   --primary-font-family: 'Poppins', sans-serif;
   --secondary-font-family: 'Roboto', sans-serif;
   --poppins-heading-font-weight: 600;
@@ -31,12 +33,12 @@ body {
 h1, h2, h3 {
   font-family: var(--primary-font-family);
   font-weight: var(--poppins-heading-font-weight);
-  color: var(--HeadingColor);
+  color: var(--SecondaryColor);
   margin: 0;
 }
 
 a {
-  color: var(--SecondaryColor);
+  color: var(--SecondaryColor) ;
   text-decoration: none;
   transition: color 0.3s ease-in-out;
 }
@@ -278,6 +280,7 @@ p {
   align-items: flex-start; /* Aligns all content to the left */
   justify-content: flex-start; /* Ensures vertical alignment starts at the top */
   gap: 10px; /* Adds spacing between elements */
+  color: var(--SecondaryColor);
 }
 
 .custom-hero-subheadline {
@@ -295,7 +298,8 @@ p {
   line-height: 1.2;
   margin: 0px 0;
   color: transparent;
-  background-image: linear-gradient(to left, var(--PrimaryColor), var(--SecondaryColor), var(--AccentColor));
+  color: var(--SecondaryColor);
+
   -webkit-background-clip: text;
   text-transform: uppercase;
 }
@@ -589,6 +593,10 @@ p {
  {
   display: grid;
   place-items: center;
+  height: 300px;
+  padding-top: 50px;
+  margin-bottom: 20px;
+
 
 
   

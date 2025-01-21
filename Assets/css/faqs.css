@@ -1,15 +1,4 @@
-:root {
-    --PrimaryColor: #01579B;
-    --SecondaryColor: #00BCD4;
-    --AccentColor: #FF7043;
-    --BackgroundColor: #ffffff;
-    --TextColor: #333333;
-    --primary-font-family: 'Poppins', sans-serif;
-    --secondary-font-family: 'Roboto', sans-serif;
-    --poppins-heading-font-weight: 600;
-    --poppins-sub-heading-font-weight: 500;
-    --BodyText: 400;
-  }
+
   
 .parent-container-faq{
 
