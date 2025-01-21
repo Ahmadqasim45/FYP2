@@ -5,11 +5,9 @@
 
 
 :root {
-  --PrimaryColor: #008080; /* Deep red for blood */
-  --SecondaryColor: #155E95; /* Dark maroon for organs */
-  --AccentColor: #BE3144; /* Bright red as an accent */
-  --BackgroundColor: #FBE9E7; /* Soft pinkish-beige for a gentle background */
-  --TextColor: #212121; /* Dark gray for readability */
+  --PrimaryColor: #2B6CB0; /* Deep Blue for trust and professionalism */
+  --SecondaryColor: #48BB78; /* Sage Green for life and healing */
+  --BackgroundColor: #F7FAFC; /* Off-White for a clean background */
   --primary-font-family: 'Poppins', sans-serif;
   --secondary-font-family: 'Roboto', sans-serif;
   --poppins-heading-font-weight: 600;
@@ -19,10 +17,10 @@
 
 body {
   background-color: var(--BackgroundColor);
-  color: var(--TextColor);
+  color: var(--PrimaryColor);
   font-family: var(--primary-font-family);
   font-weight: var(--BodyText);
-  overflow-x: hidden; /* Add this line to hide horizontal overflow */
+  overflow-x: hidden;
 }
 
 /* Default Styles */
@@ -33,7 +31,7 @@ h1, h2, h3 {
 }
 
 a {
-  color: var(--AccentColor);
+  color: var(--SecondaryColor);
   text-decoration: none;
 }
 
@@ -49,57 +47,10 @@ button {
 }
 
 button:hover {
-  background-color: var(--AccentColor);
+  background-color: var(--SecondaryColor);
   color: var(--BackgroundColor);
 }
 
-/* Mobile Devices (max-width: 480px) */
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.8rem;  /* Slightly smaller size for mobile */
-  }
-
-  h2 {
-    font-size: 1.6rem;  /* Smaller size for subheadings */
-  }
-
-  h3 {
-    font-size: 1.4rem;  /* Smallest for h3 */
-  }
-
-  a {
-    font-size: 14px;  /* Adjust link size */
-  }
-
-  button {
-    padding: 0.4rem 0.8rem;  /* Adjust button size */
-    font-size: 14px;  /* Adjust button text size */
-  }
-}
-
-/* Tablet Devices (max-width: 768px) */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2rem;  /* Adjust h1 size for tablet */
-  }
-
-  h2 {
-    font-size: 1.75rem;  /* Adjust h2 size for tablet */
-  }
-
-  h3 {
-    font-size: 1.5rem;  /* Adjust h3 size for tablet */
-  }
-
-  a {
-    font-size: 15px;  /* Slightly larger text for better readability */
-  }
-
-  button {
-    padding: 0.45rem 0.9rem;  /* Slight adjustment for button */
-    font-size: 15px;  /* Adjust button text size */
-  }
-}
 
 /* Navbar Styling */
 .custom-navbar {
@@ -235,34 +186,45 @@ button:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: left;
 }
 
 /* Headline Section */
+/* Updated Hero Section Styling */
 .custom-hero-headline {
-  position: relative;
-  left: 130px;
-  color: var(--TextColor); /* Applying TextColor */
-  padding: 10px;
-  text-align: left;
+  color: var(--TextColor);
+  padding: 0px;
+  text-align: left; /* Ensures text aligns to the left */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligns all content to the left */
+  justify-content: flex-start; /* Ensures vertical alignment starts at the top */
+  gap: 10px; /* Adds spacing between elements */
 }
 
 .custom-hero-subheadline {
   font-size: 1rem;
   text-transform: uppercase;
-  color: var(--SecondaryColor); /* Applying SecondaryColor */
+  color: var(--SecondaryColor);
+
+
+
 }
 
 .custom-hero-title {
   font-size: 3.5em;
   font-weight: bold;
   line-height: 1.2;
-  margin: 20px 0;
+  margin: 0px 0;
   color: transparent;
-  background-image: linear-gradient(to left, var(--PrimaryColor), var(--SecondaryColor), var(--AccentColor)); /* Applying Primary, Secondary, and Accent colors */
+  background-image: linear-gradient(to left, var(--PrimaryColor), var(--SecondaryColor), var(--AccentColor));
   -webkit-background-clip: text;
   text-transform: uppercase;
 }
+
+
+
+
 
 .custom-hero-title .highlight {
   color: var(--AccentColor); /* Applying AccentColor */
@@ -501,9 +463,13 @@ button:hover {
 /* statistics section */
 .statistic-section {
   padding-top: 70px;
+  padding-left: 0;
+  padding-right: 0;
   padding-bottom: 70px;
   background: linear-gradient(to right, var(--PrimaryColor), var(--SecondaryColor)); /* Linear gradient with your color scheme */
   color: #fff;
+  width:100% ;
+
 }
 
 .count-title {
@@ -545,6 +511,9 @@ button:hover {
  {
   display: grid;
   place-items: center;
+
+
+  
 }
 
 h1 {
@@ -558,11 +527,11 @@ h1 {
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: 80%;
+  width: 95%;
   overflow: hidden;
   background: rgb(255, 255, 255);
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
   backdrop-filter: blur(7.4px);
   -webkit-backdrop-filter: blur(7.4px);
   border: 1px solid rgba(255, 255, 255, 0.4);
