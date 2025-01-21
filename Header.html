@@ -65,60 +65,41 @@
     </nav>
 
     <!-- Desktop Navbar -->
-    <nav
-      class="custom-navbar navbar navbar-expand-lg p-3 d-none d-lg-flex fixed-top"
-    >
-      <div
-        class="container-fluid d-flex justify-content-between align-items-center"
-      >
+    <nav class="custom-navbar navbar navbar-expand-lg px-4 g-3 d-none d-lg-flex fixed-top">
+      <div class="container-fluid d-flex justify-content-between align-items-center">
+        <!-- Brand Logo -->
         <a class="navbar-brand" href="#">
           <span>Organ</span><span class="text-secondary">Do</span
           ><span class="text-accent">nation</span>
         </a>
-        <ul class="navbar-nav ">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">How to Donate</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Need an Organ</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact Us</a>
-          </li>
-        </ul>
-        <button class="btn btn-donor px-4 py-2 rounded-pill ms-0">
-          Sign In
-        </button>
+        
+        <!-- Navigation Links and Button -->
+        <div class="d-flex align-items-center">
+          <ul class="navbar-nav me-3">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">How to Donate</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Need an Organ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li>
+          </ul>
+          <button class="btn btn-donor px-4 py-2 rounded-pill ms-0">
+            Sign In
+          </button>
+        </div>
       </div>
     </nav>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const navbarToggler = document.querySelector(".navbar-toggler");
-        const barsIcon = document.getElementById("barsIcon");
-        const crossIcon = document.getElementById("crossIcon");
-
-        // Toggle the navbar and icons when the navbar button is clicked
-        navbarToggler.addEventListener("click", function () {
-          // Toggle the navbar collapse
-          const navbarCollapse = document.getElementById("mobileNav");
-          navbarCollapse.classList.toggle("show");
-
-          // Toggle the icons (bars and cross)
-          if (navbarCollapse.classList.contains("show")) {
-            barsIcon.style.display = "none";
-            crossIcon.style.display = "block";
-          } else {
-            barsIcon.style.display = "block";
-            crossIcon.style.display = "none";
-          }
-        });
-      });
-    </script>
+    
+    <script src="./Assets/Js/header.js"></script>
+    
   </body>
 </html>

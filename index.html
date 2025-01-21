@@ -21,9 +21,9 @@
     <!-- <div class="parent-nav"> -->
     <!-- Mobile Navbar -->
     <div id="header"></div>
-
+   
     <!-- Hero Section -->
-    <div class="parent-hero">
+    <div class="parent-hero padding-all-section">
       <div
         class="custom-hero-section d-sm-flex align-items-center justify-content-between"
         style="height: 100vh"
@@ -53,6 +53,7 @@
         </div>
       </div>
     </div>
+    <div id="organ-donation-section"></div>
     <!-- <div id="organ-donation-section"></div> -->
      
     <!-- <div id="organ-donation-section"></div> -->
@@ -213,7 +214,7 @@
       </div>
     </section>
     <!-- statistics -->
-    <section id="statistic" class="statistic-section one-page-section my-5">
+    <section id="statistic" class="statistic-section one-page-section my-5 ">
       <div class="container-fluid">
         <div class="row text-center d-flex justify-content-between align-items-center">
           <!-- Donor Count -->
@@ -264,67 +265,12 @@
 
     <!-- succes stories -->
 
-    <!-- partners -->
+    <div id="gallery-container"></div>
 
-    <section class="section-partners ">
-      <!-- <h1>Our Partners</h1> -->
-      <div class="slider">
-        <div class="slider-items">
-          <img
-            src="https://www.zarla.com/images/nike-logo-2400x2400-20220504.png?crop=1:1,smart&width=150&dpr=2"
-            alt=""
-          />
-          <img
-            src="https://www.zarla.com/images/apple-logo-2400x2400-20220512-1.png?crop=1:1,smart&width=150&dpr=2"
-            alt=""
-          />
-          <img
-            src="https://www.zarla.com/images/disney-logo-2400x2400-20220513-2.png?crop=1:1,smart&width=150&dpr=2"
-            alt=""
-          />
-          <img
-            src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4d/Loon_%28company%29_logo.svg/800px-Loon_%28company%29_logo.svg.png"
-            alt=""
-          />
-          <img
-            src="https://upload.wikimedia.org/wikipedia/en/thumb/3/37/Jumpman_logo.svg/1200px-Jumpman_logo.svg.png"
-            alt=""
-          />
-          <img src="https://www.svgrepo.com/show/303123/bmw-logo.svg" alt="" />
-          <img
-            src="https://brandlogos.net/wp-content/uploads/2014/12/starbucks_coffee_company-logo_brandlogos.net_9jqys.png"
-            alt=""
-          />
-          <img
-            src="https://www.zarla.com/images/nike-logo-2400x2400-20220504.png?crop=1:1,smart&width=150&dpr=2"
-            alt=""
-          />
-          <img
-            src="https://www.zarla.com/images/apple-logo-2400x2400-20220512-1.png?crop=1:1,smart&width=150&dpr=2"
-            alt=""
-          />
-          <img
-            src="https://www.zarla.com/images/disney-logo-2400x2400-20220513-2.png?crop=1:1,smart&width=150&dpr=2"
-            alt=""
-          />
-          <img
-            src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4d/Loon_%28company%29_logo.svg/800px-Loon_%28company%29_logo.svg.png"
-            alt=""
-          />
-          <img
-            src="https://upload.wikimedia.org/wikipedia/en/thumb/3/37/Jumpman_logo.svg/1200px-Jumpman_logo.svg.png"
-            alt=""
-          />
-          <img src="https://www.svgrepo.com/show/303123/bmw-logo.svg" alt="" />
-          <img
-            src="https://brandlogos.net/wp-content/uploads/2014/12/starbucks_coffee_company-logo_brandlogos.net_9jqys.png"
-            alt=""
-          />
-        </div>
-      </div>
-    </section>
-    <h1 class="text-center">Our Success Stories</h1>
     <div id="testimonial-container"></div>
+    <div id="partner-container"></div>
+
+
 
     <div class="parent-container-faq">
       <h1 class="text-center">Faqs</h1>
@@ -403,6 +349,7 @@
         </div>
       </div>
     </div>
+    
     <script>
       // video button
       // Function to open the video overlay and embed video
@@ -536,14 +483,20 @@
         updateSlide();
       });
 
-      fetch("testimonial.html")
-        .then((response) => response.text())
-        .then((html) => {
-          document.getElementById("testimonial-container").innerHTML = html;
-        })
-        .catch((error) => {
-          console.error("Error loading testimonial carousel:", error);
-        });
+      fetch("gallery.html")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.text();
+  })
+  .then((html) => {
+    document.getElementById("gallery-container").innerHTML = html;
+  })
+  .catch((error) => {
+    console.error("Error loading gallery content:", error);
+  });
+
 
       fetch("Faqs.html")
         .then((response) => response.text())
@@ -609,6 +562,34 @@
   .catch((error) => {
     console.error("Error:", error);
   });
+  fetch("testimonial.html")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    return response.text();
+  })
+  .then((html) => {
+    document.getElementById("testimonial-container").innerHTML = html;
+  })
+  .catch((error) => {
+    console.error("Error loading testimonial section:", error);
+  });
+
+  fetch("partner.html")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    return response.text();
+  })
+  .then((html) => {
+    document.getElementById("partner-container").innerHTML = html;
+  })
+  .catch((error) => {
+    console.error("Error loading testimonial section:", error);
+  });
+
 
        
     </script>
@@ -638,6 +619,7 @@
         });
       });
     </script>
+    <script src="./Assets/Js/header.js"></script>
 
     <script src="./script.js"></script>
     <script src="./Assets/Js/video-play.js"></script>
