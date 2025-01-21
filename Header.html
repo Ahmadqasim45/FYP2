@@ -1,116 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" defer></script>
-        <link rel="stylesheet" href="./Assets/css/style.css">
-     
-        <title>Header</title>
-      </head>
-<body>
-    <nav class="custom-navbar navbar navbar-expand-lg p-3 d-lg-none fixed-top ">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <span>Organ</span><span class="text-secondary">Do</span
-            ><span class="text-accent">nation</span>
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            aria-controls="mobileNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            id="navbarToggler"
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
+    <link rel="stylesheet" href="./Assets/css/style.css" />
+    <link rel="stylesheet" href="./Assets/css/work-section.css" />
+    <title>Header</title>
+  </head>
+  <body>
+    <nav class="custom-navbar navbar navbar-expand-lg p-3 d-lg-none fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <span>Organ</span><span class="text-secondary">Do</span
+          ><span class="text-accent">nation</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          aria-controls="mobileNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          id="navbarToggler"
+        >
+          <i id="barsIcon" class="fa-solid fa-bars"></i>
+          <i id="crossIcon" class="fa-solid fa-x" style="display: none"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="mobileNav">
+          <ul
+            class="navbar-nav ms-auto justify-content-center align-items-center"
           >
-            <i id="barsIcon" class="fa-solid fa-bars"></i>
-            <i id="crossIcon" class="fa-solid fa-x" style="display: none;"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="mobileNav">
-            <ul class="navbar-nav ms-auto justify-content-center align-items-center">
-              <li class="nav-item">
-                <a class="nav-link" href="./index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Become a Hospital</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Become a Donor</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Become a Recipient</a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="btn btn-donor w-100 mt-2 px-4 py-2 rounded-pill ms-0 nav-link"
-                  >Sign In</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    
-      <!-- Desktop Navbar -->
-      <nav class="custom-navbar navbar navbar-expand-lg p-3 d-none d-lg-flex  fixed-top">
-        <div class="container-fluid d-flex justify-content-between align-items-center">
-          <a class="navbar-brand" href="#">
-            <span>Organ</span><span class="text-secondary">Do</span
-            ><span class="text-accent">nation</span>
-          </a>
-          <ul class="navbar-nav mx-auto">
             <li class="nav-item">
               <a class="nav-link" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">How to Donate</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Need an Organ</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Contact Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Become a Hospital</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Become a Donor</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Become a Recipient</a>
+              <a
+                class="btn btn-donor w-100 mt-2 px-4 py-2 rounded-pill ms-0 nav-link"
+                >Sign In</a
+              >
             </li>
           </ul>
-          <button class="btn btn-donor px-4 py-2 rounded-pill ms-0">Sign In</button>
         </div>
-      </nav>
-      <script>
-          document.addEventListener("DOMContentLoaded", function() {
-    const navbarToggler = document.querySelector(".navbar-toggler");
-    const barsIcon = document.getElementById("barsIcon");
-    const crossIcon = document.getElementById("crossIcon");
+      </div>
+    </nav>
 
-    // Toggle the navbar and icons when the navbar button is clicked
-    navbarToggler.addEventListener("click", function() {
-      // Toggle the navbar collapse
-      const navbarCollapse = document.getElementById("mobileNav");
-      navbarCollapse.classList.toggle("show");
+    <!-- Desktop Navbar -->
+    <nav
+      class="custom-navbar navbar navbar-expand-lg p-3 d-none d-lg-flex fixed-top"
+    >
+      <div
+        class="container-fluid d-flex justify-content-between align-items-center"
+      >
+        <a class="navbar-brand" href="#">
+          <span>Organ</span><span class="text-secondary">Do</span
+          ><span class="text-accent">nation</span>
+        </a>
+        <ul class="navbar-nav ">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">How to Donate</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Need an Organ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+        </ul>
+        <button class="btn btn-donor px-4 py-2 rounded-pill ms-0">
+          Sign In
+        </button>
+      </div>
+    </nav>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const navbarToggler = document.querySelector(".navbar-toggler");
+        const barsIcon = document.getElementById("barsIcon");
+        const crossIcon = document.getElementById("crossIcon");
 
-      // Toggle the icons (bars and cross)
-      if (navbarCollapse.classList.contains("show")) {
-        barsIcon.style.display = "none";
-        crossIcon.style.display = "block";
-      } else {
-        barsIcon.style.display = "block";
-        crossIcon.style.display = "none";
-      }
-    });
-  });
+        // Toggle the navbar and icons when the navbar button is clicked
+        navbarToggler.addEventListener("click", function () {
+          // Toggle the navbar collapse
+          const navbarCollapse = document.getElementById("mobileNav");
+          navbarCollapse.classList.toggle("show");
 
-      </script>
-</body>
+          // Toggle the icons (bars and cross)
+          if (navbarCollapse.classList.contains("show")) {
+            barsIcon.style.display = "none";
+            crossIcon.style.display = "block";
+          } else {
+            barsIcon.style.display = "block";
+            crossIcon.style.display = "none";
+          }
+        });
+      });
+    </script>
+  </body>
 </html>

@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donor Registration</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-color: #2b6cb0;
+        --secondary-color: #48bb78;
+        --background-color: #f7fafc;
+        --text-color: #2d3748;
+        --heading-color: #1a365d;
+      }
+
+      body {
+        background-color: var(--background-color);
+        color: var(--text-color);
+      }
+
+      .registration-container {
+        max-width: 800px;
+        margin: 2rem auto;
+      }
+
+      .form-section {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+      }
+
+      .step-indicator {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+        position: relative;
+      }
+
+      .step-indicator::before {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: #e2e8f0;
+        z-index: 1;
+      }
+
+      .step {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background: white;
+        border: 2px solid #e2e8f0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 2;
+      }
+
+      .step.active {
+        background: var(--primary-color);
+        border-color: var(--primary-color);
+        color: white;
+      }
+
+      .step.completed {
+        background: var(--secondary-color);
+        border-color: var(--secondary-color);
+        color: white;
+      }
+
+      .form-step {
+        display: none;
+      }
+
+      .form-step.active {
+        display: block;
+      }
+
+      .btn-primary {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+      }
+
+      .btn-primary:hover {
+        background-color: #2457a0;
+        border-color: #2457a0;
+      }
+
+      .custom-control-input:checked ~ .custom-control-label::before {
+        background-color: var(--secondary-color);
+        border-color: var(--secondary-color);
+      }
+
+      .thank-you-message {
+        text-align: center;
+        padding: 3rem;
+        display: none;
+      }
+
+      .success-checkmark {
+        font-size: 4rem;
+        color: var(--secondary-color);
+        margin-bottom: 1rem;
+      }
+
+      .form-floating > .form-control:focus ~ label,
+      .form-floating > .form-control:not(:placeholder-shown) ~ label {
+        color: var(--primary-color);
+      }
+
+      .alert-info {
+        background-color: #ebf8ff;
+        border-color: #bee3f8;
+        color: var(--primary-color);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container registration-container">
+      <h1 class="text-center mb-4">Donor Registration</h1>
+
+      <!-- Progress Steps -->
+      <div class="step-indicator mb-4">
+        <div class="step active" data-step="1">1</div>
+        <div class="step" data-step="2">2</div>
+        <div class="step" data-step="3">3</div>
+        <div class="step" data-step="4">4</div>
+      </div>
+
+      <!-- Registration Form -->
+      <div class="form-section">
+        <form id="donorRegistrationForm" novalidate>
+          <!-- Step 1: Personal Information -->
+          <div class="form-step active" data-step="1">
+            <h3 class="mb-4">Personal Information</h3>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="firstName"
+                    placeholder="First Name"
+                    required
+                  />
+                  <label for="firstName">First Name</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="lastName"
+                    placeholder="Last Name"
+                    required
+                  />
+                  <label for="lastName">Last Name</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating mb-3">
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="dateOfBirth"
+                    required
+                  />
+                  <label for="dateOfBirth">Date of Birth</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating mb-3">
+                  <select class="form-select" id="gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                  </select>
+                  <label for="gender">Gender</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2: Contact Information -->
+          <div class="form-step" data-step="2">
+            <h3 class="mb-4">Contact Information</h3>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="form-floating mb-3">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="Email"
+                    required
+                  />
+                  <label for="email">Email Address</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating mb-3">
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="phone"
+                    placeholder="Phone"
+                    required
+                  />
+                  <label for="phone">Phone Number</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="address"
+                    placeholder="Address"
+                    required
+                  />
+                  <label for="address">Street Address</label>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="city"
+                    placeholder="City"
+                    required
+                  />
+                  <label for="city">City</label>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="state"
+                    placeholder="State"
+                    required
+                  />
+                  <label for="state">State</label>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="zipCode"
+                    placeholder="Zip Code"
+                    required
+                  />
+                  <label for="zipCode">Zip Code</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3: Medical Information -->
+          <div class="form-step" data-step="3">
+            <h3 class="mb-4">Medical Information</h3>
+            <div class="alert alert-info mb-4">
+              <i class="fas fa-info-circle"></i> Your medical information helps
+              us understand your donation eligibility.
+            </div>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="form-floating mb-3">
+                  <select class="form-select" id="bloodType" required>
+                    <option value="">Select Blood Type</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                  </select>
+                  <label for="bloodType">Blood Type</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating mb-3">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="weight"
+                    placeholder="Weight"
+                    required
+                  />
+                  <label for="weight">Weight (kg)</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <h5 class="mb-3">Medical History</h5>
+                <div class="form-check mb-2">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="diabetes"
+                  />
+                  <label class="form-check-label" for="diabetes"
+                    >Diabetes</label
+                  >
+                </div>
+                <div class="form-check mb-2">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="heartDisease"
+                  />
+                  <label class="form-check-label" for="heartDisease"
+                    >Heart Disease</label
+                  >
+                </div>
+                <div class="form-check mb-2">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="hypertension"
+                  />
+                  <label class="form-check-label" for="hypertension"
+                    >Hypertension</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4: Consent -->
+          <div class="form-step" data-step="4">
+            <h3 class="mb-4">Consent and Agreement</h3>
+            <div class="mb-4">
+              <div class="form-check mb-3">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="organConsent"
+                  required
+                />
+                <label class="form-check-label" for="organConsent">
+                  I consent to donate my organs after death for the purpose of
+                  transplantation
+                </label>
+              </div>
+              <div class="form-check mb-3">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="tissueConsent"
+                  required
+                />
+                <label class="form-check-label" for="tissueConsent">
+                  I consent to donate my tissues after death for the purpose of
+                  transplantation
+                </label>
+              </div>
+              <div class="form-check mb-3">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="termsConsent"
+                  required
+                />
+                <label class="form-check-label" for="termsConsent">
+                  I have read and agree to the terms and conditions
+                </label>
+              </div>
+            </div>
+            <div class="mb-4">
+              <h5>Emergency Contact</h5>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="emergencyName"
+                      placeholder="Name"
+                      required
+                    />
+                    <label for="emergencyName">Contact Name</label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="emergencyPhone"
+                      placeholder="Phone"
+                      required
+                    />
+                    <label for="emergencyPhone">Contact Phone</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation Buttons -->
+          <div class="d-flex justify-content-between mt-4">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              id="prevBtn"
+              style="display: none"
+            >
+              Previous
+            </button>
+            <button type="button" class="btn btn-primary" id="nextBtn">
+              Next
+            </button>
+            <button
+              type="submit"
+              class="btn btn-success"
+              id="submitBtn"
+              style="display: none"
+            >
+              Submit Registration
+            </button>
+          </div>
+        </form>
+
+        <!-- Thank You Message -->
+        <div class="thank-you-message">
+          <i class="fas fa-check-circle success-checkmark"></i>
+          <h2>Thank You for Registering!</h2>
+          <p class="lead">Your registration has been successfully submitted.</p>
+          <p>We will review your information and contact you soon.</p>
+          <button
+            class="btn btn-primary mt-3"
+            onclick="window.location.href='index.html'"
+          >
+            Return to Home
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("donorRegistrationForm");
+        const steps = document.querySelectorAll(".form-step");
+        const stepIndicators = document.querySelectorAll(".step");
+        const nextBtn = document.getElementById("nextBtn");
+        const prevBtn = document.getElementById("prevBtn");
+        const submitBtn = document.getElementById("submitBtn");
+        const thankYouMessage = document.querySelector(".thank-you-message");
+        let currentStep = 1;
+
+        // Update step visibility
+        function showStep(stepNumber) {
+          steps.forEach((step) => {
+            step.classList.remove("active");
+            if (step.dataset.step == stepNumber) {
+              step.classList.add("active");
+            }
+          });
+
+          // Update step indicators
+          stepIndicators.forEach((indicator) => {
+            const indicatorStep = parseInt(indicator.dataset.step);
+            indicator.classList.remove("active", "completed");
+            if (indicatorStep === stepNumber) {
+              indicator.classList.add("active");
+            } else if (indicatorStep < stepNumber) {
+              indicator.classList.add("completed");
+            }
+          });
+
+          // Update buttons
+          prevBtn.style.display = stepNumber === 1 ? "none" : "block";
+          nextBtn.style.display = stepNumber === 4 ? "none" : "block";
+          submitBtn.style.display = stepNumber === 4 ? "block" : "none";
+        }
+
+        // Move to the next step
+        nextBtn.addEventListener("click", () => {
+          if (currentStep < steps.length) {
+            currentStep++;
+            showStep(currentStep);
+          }
+        });
+
+        // Move to the previous step
+        prevBtn.addEventListener("click", () => {
+          if (currentStep > 1) {
+            currentStep--;
+            showStep(currentStep);
+          }
+        });
+
+        // Handle form submission
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          // Validate form
+          if (form.checkValidity()) {
+            // Hide form and show thank you message
+            form.style.display = "none";
+            thankYouMessage.style.display = "block";
+          } else {
+            form.reportValidity();
+          }
+        });
+
+        // Initialize step display
+        showStep(currentStep);
+      });
+    </script>
+  </body>
+</html>
