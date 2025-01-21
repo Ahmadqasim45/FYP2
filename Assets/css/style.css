@@ -7,11 +7,11 @@
 
 
 :root {
-  --PrimaryColor: #ED8936 !important; /* Deep Blue for trust and professionalism */
-  --SecondaryColor: #48BB78 !important; /* Sage Green for life and healing */
+  --PrimaryColor: #973131 !important; /* Deep Blue for trust and professionalism */
+  --SecondaryColor: #292929 !important; /* Sage Green for life and healing  */
   --BackgroundColor: white !important; /* Off-White for a clean background */
-  --TextColor: #2D3748; /* Dark gray for readability */
-  /* --HeadingColor: #1A365D; Darker blue for headings */
+  --TextColor: #434343; /* Dark gray for readability */
+  --HeadingColor: #292929;
   --primary-font-family: 'Poppins', sans-serif;
   --secondary-font-family: 'Roboto', sans-serif;
   --poppins-heading-font-weight: 600;
