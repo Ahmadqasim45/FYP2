@@ -172,11 +172,15 @@
   @media (max-width: 768px) {
     .od-nav__list {
       flex-direction: column; /* Vertical navigation for smaller screens */
+      margin-top: 400px;
     }
   
     .od-nav__link {
       padding: 0.8rem 1.5rem;
       font-size: 1rem;
+      margin-top: 0px !important;
+      display: flex;
+      flex-direction: column;
     }
   
     .od-filter__input {

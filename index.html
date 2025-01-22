@@ -269,87 +269,13 @@
 
     <div id="testimonial-container"></div>
     <div id="partner-container"></div>
-
-
-
-    <div class="parent-container-faq">
-      <h1 class="text-center">Faqs</h1>
-      <div class="parent-faq">
-        <div class="faq-container">
-          <div class="faq-item">
-            <div class="faq-question">
-              How has our platform helped individuals in need?
-              <span class="arrow">▶</span>
-            </div>
-            <div class="faq-answer">
-              Our platform has connected over 10,000 individuals with
-              life-saving donations and critical resources.
-            </div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question">
-              What makes our approach unique?
-              <span class="arrow">▶</span>
-            </div>
-            <div class="faq-answer">
-              We combine advanced technology with a personalized approach to
-              ensure every case receives the attention it deserves.
-            </div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question">
-              Can you share a story of impact?
-              <span class="arrow">▶</span>
-            </div>
-            <div class="faq-answer">
-              A recent case involved matching a critical organ donor with a
-              recipient within 24 hours, saving a life through quick action.
-            </div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question">
-              How do we ensure transparency in our services?
-              <span class="arrow">▶</span>
-            </div>
-            <div class="faq-answer">
-              We provide detailed progress updates, ensure traceability, and
-              allow users to track their impact directly.
-            </div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question">
-              What role do donors play in our success?
-              <span class="arrow">▶</span>
-            </div>
-            <div class="faq-answer">
-              Donors are at the heart of our success, enabling us to create a
-              network of trust and lifesaving resources.
-            </div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question">
-              How do we scale our efforts for a wider reach?
-              <span class="arrow">▶</span>
-            </div>
-            <div class="faq-answer">
-              By partnering with global organizations and leveraging technology,
-              we ensure scalable and sustainable impact.
-            </div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question">
-              What feedback have we received from our users?
-              <span class="arrow">▶</span>
-            </div>
-            <div class="faq-answer">
-              Users praise our platform for its simplicity, transparency, and
-              meaningful outcomes in creating life-changing connections.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     
+
+
+=
+
+  
+    <div id="footer-container"></div>
     <script>
       // video button
       // Function to open the video overlay and embed video
@@ -590,6 +516,19 @@
     console.error("Error loading testimonial section:", error);
   });
 
+  fetch("footer.html")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    return response.text();
+  })
+  .then((html) => {
+    document.getElementById("footer-container").innerHTML = html;
+  })
+  .catch((error) => {
+    console.error("Error loading testimonial section:", error);
+  });
 
        
     </script>

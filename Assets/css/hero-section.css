@@ -1,0 +1,45 @@
+
+/* Use system font stack similar to the image */
+
+
+/* Hero header section style */
+.other-pages-hero-header-section {
+    padding: 40px 0 80px 0; /* Adjusted padding */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    /* background-color: #f7f7f7; Light background to reflect organ donation theme */
+}
+
+.other-pages-hero-main-heading {
+    font-size: 48px; /* Exact size from image */
+    font-weight: 900; /* Heavier weight to match image */
+    margin-bottom: 24px; /* Exact spacing from image */
+    /* color: #0044cc; Blue color to signify trust */
+    line-height: 1.2;
+}
+
+.other-pages-hero-sub-text {
+    font-size: 16px; /* Exact size from image */
+    color: #000;
+    max-width: 720px; /* Matches image width */
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Container width adjustment */
+.other-pages-container {
+    max-width: 1140px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .ohter-pages-hero-main-heading {
+        font-size: 32px;
+    }
+   
+}

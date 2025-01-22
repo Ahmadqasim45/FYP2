@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>United for Good - About Organ Donation</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./Assets/css/style.css">
+
+</head>
+<body>
+    <div id="header"></div>
+    <header class="other-pages-hero-header-section">
+        <div class="other-pages-container">
+            <h1 class="other-pages-hero-main-heading">About Us</h1>
+            <p class="other-pages-hero-sub-text">
+                Orglink saves lives. By becoming an organ donor, you can help people in need and offer hope for a better future. Your generosity can make a life-changing difference.
+            </p>
+        </div>
+    </header>
+
+
+
+    <!-- Load the correct breadcrumb -->
+  <script>
+      // Load Header.html into the 'header' div
+      fetch("Header.html")
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Failed to load Header.html");
+          }
+          return response.text();
+        })
+        .then((html) => {
+          document.getElementById("header").innerHTML = html;
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+
+  </script>
+      <!-- Bootstrap 5 JS Bundle (includes Popper) -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

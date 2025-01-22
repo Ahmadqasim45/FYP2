@@ -20,7 +20,7 @@
     max-width: 100%;
     background-color: var(--BackgroundColor);
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
     overflow: hidden;
   }
   
@@ -44,6 +44,7 @@
     transition: background-color 0.3s ease;
     margin: 5px;
     border-bottom: 1px solid var(--AccentColor);
+    border-top: 1px solid var(--PrimaryColor);
   }
   
   .faq-question:hover {
