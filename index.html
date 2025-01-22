@@ -7,6 +7,14 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
       defer
@@ -21,26 +29,33 @@
     <!-- <div class="parent-nav"> -->
     <!-- Mobile Navbar -->
     <div id="header"></div>
-   
+
     <!-- Hero Section -->
     <div class="parent-hero padding-all-section">
       <div
         class="custom-hero-section d-sm-flex align-items-center justify-content-between"
         style="height: 100vh"
       >
-      <div class="custom-hero-headline col-md-4 d-flex flex-column align-items-start justify-content-start">
-        <span class="custom-hero-subheadline mx-4">Save Lives, Donate Organs</span>
-        <h1 class="custom-hero-title">
-          Become a <span class="highlight">Hero and Save a Life</span>
-        </h1>
-        <a
-          href="#"
-          class="custom-hero-button w-50 mt-2 px-4 mx-4 text-center py-2 rounded-pill"
-          >Donate Now</a
+        <div
+          class="custom-hero-headline col-md-5 d-flex flex-column align-items-start justify-content-start"
         >
-      </div>
+          <div class="custom-hero-content">
+            <span class="custom-hero-subheadline mx-4"
+              >Save Lives, Donate Organs</span
+            >
+            <h1 class="custom-hero-title">
+              Become a <span class="highlight">Hero and Save a Life</span>
+            </h1>
+          </div>
 
-        <div class="custom-hero-image col-md-8 h-100 clipped">
+          <a
+            href="#"
+            class="custom-hero-button w-50 mt-2 px-4 mx-4 text-center py-2 rounded-pill"
+            >Donate Now</a
+          >
+        </div>
+
+        <div class="custom-hero-image col-md-7 h-100 clipped">
           <!-- Video Play Button -->
           <a id="play-video" class="video-play-button" href="#">
             <span></span>
@@ -55,9 +70,9 @@
     </div>
     <div id="organ-donation-section"></div>
     <!-- <div id="organ-donation-section"></div> -->
-     
+
     <!-- <div id="organ-donation-section"></div> -->
-    <section class="od-section py-5 ">
+    <section class="od-section py-5">
       <div class="container-fluid">
         <!-- Navigation (Tabs) -->
 
@@ -71,19 +86,7 @@
               role="tab"
               aria-controls="od-donor"
               aria-selected="true"
-              >Become a Donor</a
-            >
-          </li>
-          <li class="od-nav__item" role="presentation">
-            <a
-              class="od-nav__link"
-              id="od-recipient-tab"
-              data-bs-toggle="pill"
-              href="#od-recipient"
-              role="tab"
-              aria-controls="od-recipient"
-              aria-selected="false"
-              >Become a Recipient</a
+              ><i class="fa-solid fa-heart-circle-plus"></i> Become a Donor</a
             >
           </li>
           <li class="od-nav__item" role="presentation">
@@ -95,7 +98,19 @@
               role="tab"
               aria-controls="od-hospital"
               aria-selected="false"
-              >Become a Hospital</a
+              ><i class="fa-solid fa-user-doctor"></i> Become a Hospital</a
+            >
+          </li>
+          <li class="od-nav__item" role="presentation">
+            <a
+              class="od-nav__link"
+              id="od-recipient-tab"
+              data-bs-toggle="pill"
+              href="#od-recipient"
+              role="tab"
+              aria-controls="od-recipient"
+              aria-selected="false"
+              ><i class="fa-solid fa-heart-pulse"></i> Become a Recipient</a
             >
           </li>
         </ul>
@@ -214,9 +229,11 @@
       </div>
     </section>
     <!-- statistics -->
-    <section id="statistic" class="statistic-section one-page-section my-5 ">
+    <section id="statistic" class="statistic-section one-page-section my-5">
       <div class="container-fluid">
-        <div class="row text-center d-flex justify-content-between align-items-center">
+        <div
+          class="row text-center d-flex justify-content-between align-items-center"
+        >
           <!-- Donor Count -->
           <div class="col-xs-12 col-md-3">
             <div class="counter">
@@ -410,19 +427,18 @@
       });
 
       fetch("gallery.html")
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    return response.text();
-  })
-  .then((html) => {
-    document.getElementById("gallery-container").innerHTML = html;
-  })
-  .catch((error) => {
-    console.error("Error loading gallery content:", error);
-  });
-
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.text();
+        })
+        .then((html) => {
+          document.getElementById("gallery-container").innerHTML = html;
+        })
+        .catch((error) => {
+          console.error("Error loading gallery content:", error);
+        });
 
       fetch("Faqs.html")
         .then((response) => response.text())
@@ -475,32 +491,32 @@
           console.error("Error:", error);
         });
 
-        fetch("Donation-system.html")
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error("Failed to load Donation-system.html");
-    }
-    return response.text();
-  })
-  .then((html) => {
-    document.getElementById("organ-donation-section").innerHTML = html;
-  })
-  .catch((error) => {
-    console.error("Error:", error);
-  });
-  fetch("testimonial.html")
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error("Network response was not ok");
-    }
-    return response.text();
-  })
-  .then((html) => {
-    document.getElementById("testimonial-container").innerHTML = html;
-  })
-  .catch((error) => {
-    console.error("Error loading testimonial section:", error);
-  });
+      fetch("Donation-system.html")
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Failed to load Donation-system.html");
+          }
+          return response.text();
+        })
+        .then((html) => {
+          document.getElementById("organ-donation-section").innerHTML = html;
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+      fetch("testimonial.html")
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+          return response.text();
+        })
+        .then((html) => {
+          document.getElementById("testimonial-container").innerHTML = html;
+        })
+        .catch((error) => {
+          console.error("Error loading testimonial section:", error);
+        });
 
   fetch("partner.html")
   .then((response) => {
