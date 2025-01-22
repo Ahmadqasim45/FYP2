@@ -6,6 +6,10 @@
 @import url('./gallery.css');
 @import url('./footer.css');
 @import url('./hero-section.css');
+@import url('./org-about-section.css');
+@import url('./transforming-about.css');
+@import url('./contact.css');
+
 
 
 
@@ -65,10 +69,7 @@ button {
   transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
-button:hover {
-  background-color: var(--SecondaryColor);
-  transform: scale(1.05); /* Slight hover effect */
-}
+
 
 button:active {
   transform: scale(0.98); /* Pressed effect */

@@ -14,15 +14,72 @@
     <div id="header"></div>
     <header class="other-pages-hero-header-section">
         <div class="other-pages-container">
-            <h1 class="other-pages-hero-main-heading">About Us</h1>
+            <h1 class="">About Us</h1>
             <p class="other-pages-hero-sub-text">
                 Orglink saves lives. By becoming an organ donor, you can help people in need and offer hope for a better future. Your generosity can make a life-changing difference.
             </p>
         </div>
     </header>
+    <section id="statistic" class="statistic-section one-page-section my-5">
+        <div class="container-fluid">
+          <div
+            class="row text-center d-flex justify-content-between align-items-center"
+          >
+            <!-- Donor Count -->
+            <div class="col-xs-12 col-md-3">
+              <div class="counter">
+                <i class="fa fa-heartbeat fa-2x stats-icon"></i>
+                <h2 class="timer count-title count-number" data-target="5000">
+                  0
+                </h2>
+                <div class="stats-line-black"></div>
+                <p class="stats-text">Donors Registered</p>
+              </div>
+            </div>
+            <!-- Recipient Count -->
+            <div class="col-xs-12 col-md-3">
+              <div class="counter">
+                <i class="fa fa-users fa-2x stats-icon"></i>
+                <h2 class="timer count-title count-number" data-target="2500">
+                  0
+                </h2>
+                <div class="stats-line-black"></div>
+                <p class="stats-text">Recipients Waiting</p>
+              </div>
+            </div>
+            <!-- Successful Transplants -->
+            <div class="col-xs-12 col-md-3">
+              <div class="counter">
+                <i class="fa fa-check-circle fa-2x stats-icon"></i>
+                <h2 class="timer count-title count-number" data-target="1500">
+                  0
+                </h2>
+                <div class="stats-line-black"></div>
+                <p class="stats-text">Successful Transplants</p>
+              </div>
+            </div>
+            <!-- Hospitals Partnered -->
+            <div class="col-xs-12 col-md-3">
+              <div class="counter">
+                <i class="fa fa-hospital fa-2x stats-icon"></i>
+                <h2 class="timer count-title count-number" data-target="50">0</h2>
+                <div class="stats-line-black"></div>
+                <p class="stats-text">Hospitals Partnered</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div id="org-support-container"></div>
+      <div id="transforming-about-love-container"></div>
 
+      <div id="gallery-container"></div>
 
-
+      <div id="testimonial-container"></div>
+      <div id="partner-container"></div>
+  
+    
+      <div id="footer-container"></div>
     <!-- Load the correct breadcrumb -->
   <script>
       // Load Header.html into the 'header' div
@@ -40,7 +97,89 @@
           console.error("Error:", error);
         });
 
+        fetch("org-about-section.html")
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.text();
+        })
+        .then((html) => {
+          document.getElementById("org-support-container").innerHTML = html;
+        })
+        .catch((error) => {
+          console.error("Error loading transforming-about-love-container:", error);
+        });
+
+        fetch("transforming-about-love.html")
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.text();
+        })
+        .then((html) => {
+          document.getElementById("transforming-about-love-container").innerHTML = html;
+        })
+        .catch((error) => {
+          console.error("Error loading transforming-about-love-container:", error);
+        });
+        fetch("gallery.html")
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.text();
+        })
+        .then((html) => {
+          document.getElementById("gallery-container").innerHTML = html;
+        })
+        .catch((error) => {
+          console.error("Error loading gallery content:", error);
+        });
+        fetch("partner.html")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    return response.text();
+  })
+  .then((html) => {
+    document.getElementById("partner-container").innerHTML = html;
+  })
+  .catch((error) => {
+    console.error("Error loading testimonial section:", error);
+  });
+  fetch("footer.html")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    return response.text();
+  })
+  .then((html) => {
+    document.getElementById("footer-container").innerHTML = html;
+  })
+  .catch((error) => {
+    console.error("Error loading testimonial section:", error);
+  });
+  fetch("partner.html")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    return response.text();
+  })
+  .then((html) => {
+    document.getElementById("partner-container").innerHTML = html;
+  })
+  .catch((error) => {
+    console.error("Error loading testimonial section:", error);
+  });
+
+
   </script>
+  <script src="./Assets/Js/header.js"></script>
       <!-- Bootstrap 5 JS Bundle (includes Popper) -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 </body>

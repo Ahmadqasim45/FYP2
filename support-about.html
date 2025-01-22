@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make a Difference</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+        }
+
+        .container {
+            max-width: 1240px;
+            padding: 80px 20px;
+        }
+
+        .organ-donation-image-container {
+            position: relative;
+            width: 100%;
+            height: 600px;
+            overflow: hidden;
+        }
+
+        .organ-donation-blur-bg {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
+                        url('/api/placeholder/800/600');
+            background-size: cover;
+            background-position: center;
+            border-radius: 24px;
+            filter: blur(2px);
+        }
+
+        .organ-donation-main-heading {
+            font-size: 40px;
+            font-weight: 800;
+            line-height: 1.2;
+            color: #000000;
+            margin-bottom: 40px;
+        }
+
+        .organ-donation-content-text {
+            color: #4A4A4A;
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+
+        .organ-donation-text-content {
+            display: flex;
+            gap: 32px;
+            margin-bottom: 48px;
+        }
+
+        .organ-donation-text-content > p {
+            flex: 1;
+            margin: 0;
+        }
+
+        .organ-donation-founder-section {
+            border-top: 1px solid #E5E5E5;
+            padding-top: 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .organ-donation-founder-info {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .organ-donation-founder-img {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .organ-donation-founder-details {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .organ-donation-founder-name {
+            font-weight: 600;
+            font-size: 18px;
+            color: #000000;
+            margin: 0;
+        }
+
+        .organ-donation-founder-title {
+            font-size: 16px;
+            color: #4A4A4A;
+            margin: 0;
+        }
+
+        .organ-donation-signature {
+            height: 40px;
+            object-fit: contain;
+        }
+
+        @media (max-width: 991px) {
+            .organ-donation-main-heading {
+                font-size: 36px;
+                margin-top: 32px;
+            }
+
+            .organ-donation-image-container {
+                height: 400px;
+            }
+
+            .organ-donation-text-content {
+                flex-direction: column;
+                gap: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="organ-donation-image-container">
+                    <div class="organ-donation-blur-bg"></div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <h2 class="organ-donation-main-heading">Make a Difference,<br>Donate Life, Save Lives.</h2>
+                
+                <div class="organ-donation-text-content">
+                    <p class="organ-donation-content-text">
+                        Organ donation is a powerful and life-saving act that can help individuals in need of life-saving transplants. Every day, people suffer from organ failure, and there is a critical shortage of available organs. By becoming an organ donor, you can provide hope to those who are waiting for a second chance at life.
+                    </p>
+                    <p class="organ-donation-content-text">
+                        Our Organ Donation System aims to facilitate the connection between donors and recipients. Whether you're donating your own organs or helping someone else register as a donor, this platform ensures that the process is as simple and efficient as possible, giving individuals in need the opportunity to receive the gift of life.
+                    </p>
+                </div>
+                
+                <div class="organ-donation-founder-section">
+                    <div class="organ-donation-founder-info">
+                        <img src="/api/placeholder/56/56" alt="John Doe" class="organ-donation-founder-img">
+                        <div class="organ-donation-founder-details">
+                            <p class="organ-donation-founder-name">John Doe</p>
+                            <p class="organ-donation-founder-title">Founder, Organ Donation System</p>
+                        </div>
+                    </div>
+                    <img src="/api/placeholder/120/40" alt="Signature" class="organ-donation-signature">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

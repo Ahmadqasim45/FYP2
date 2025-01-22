@@ -33,9 +33,9 @@
 }
 
 .gallery__title {
-    color: var(--HeadingColor);
-    font-size: 48px;
-    font-weight: 800;
+    font-family: var(--primary-font-family);
+    font-weight: var(--poppins-heading-font-weight);
+    color: var(--SecondaryColor);
     margin-bottom: 24px;
     position: relative;
     opacity: 0;
@@ -76,7 +76,7 @@
 }
 
 .gallery__item:hover {
-    transform: translateY(-10px) rotateX(5deg);
+    /* transform: translateY(-10px) rotateX(5deg); */
     box-shadow: 0 20px 40px rgba(151, 49, 49, 0.15);
 }
 

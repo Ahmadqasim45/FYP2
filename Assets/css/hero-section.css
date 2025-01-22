@@ -1,5 +1,7 @@
 
 /* Use system font stack similar to the image */
+.parent-other-hero{
+
 
 
 /* Hero header section style */
@@ -14,16 +16,17 @@
 }
 
 .other-pages-hero-main-heading {
-    font-size: 48px; /* Exact size from image */
-    font-weight: 900; /* Heavier weight to match image */
+    font-size: 40px; /* Exact size from image */
+    font-weight: 600; /* Heavier weight to match image */
     margin-bottom: 24px; /* Exact spacing from image */
     /* color: #0044cc; Blue color to signify trust */
     line-height: 1.2;
+    color: var(--SecondaryColor) !important;
 }
 
 .other-pages-hero-sub-text {
     font-size: 16px; /* Exact size from image */
-    color: #000;
+    color: var(--SecondaryColor);
     max-width: 720px; /* Matches image width */
     margin: 0 auto;
     line-height: 1.6;
@@ -42,4 +45,5 @@
         font-size: 32px;
     }
    
+}
 }

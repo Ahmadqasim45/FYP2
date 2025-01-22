@@ -1,73 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" defer></script>
-      
-      <link rel="stylesheet" href="./Assets/css/style.css">
-        <!-- <link rel="stylesheet" href="./Assets/css/faqs.css"> -->
-      
-        
-        <title>Faqs</title>
-      </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Section - OrgLink</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Assets/css/style.css">
+</head>
 <body>
-    <div class="parent-container-faq">
-    <div class="parent-faq">
-    <div class="faq-container">
-        <div class="faq-item">
-          <div class="faq-question">
-            What is CodePen?
-            <span class="arrow">▶</span>
-          </div>
-          <div class="faq-answer">
-            CodePen is an online code editor and learning environment for front-end development.
-          </div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">
-            How can I create a Pen?
-            <span class="arrow">▶</span>
-          </div>
-          <div class="faq-answer">
-            You can create a Pen by signing up on CodePen and clicking the "New Pen" button.
-          </div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">
-            Is CodePen free to use?
-            <span class="arrow">▶</span>
-          </div>
-          <div class="faq-answer">
-            Yes, CodePen has a free tier with limited features. Pro accounts offer advanced features.
-          </div>
-        </div>
-      </div>
+  <div class="parent-faq  ">
+    <div class="container ">
+      <div class="faq-header">
+        <div class="gallery__subtitle text-center">Find answers to common questions.</div>
+        <h2 class="gallery__title text-center">Frequently Asked Question</h2>
     </div>
-</div>
-      <script>
-            const faqItems = document.querySelectorAll('.faq-item');
+       
+  
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="accordion" id="faqAccordion">
+                    <!-- Active FAQ -->
+                    <div class="active-faq position-relative">
+                        <h6 class="h5 mb-3">What is OrgLink and how does it work?</h6>
+                        <p class="mb-0">OrgLink is an online platform that connects organ donors with recipients in need. It facilitates a secure and transparent donation process while ensuring the safety of all parties involved. Users can register as donors or recipients and track the donation process.</p>
+                        <div class="close-icon"></div>
+                    </div>
 
-faqItems.forEach(item => {
-  const question = item.querySelector('.faq-question');
-  const answer = item.querySelector('.faq-answer');
-  const arrow = item.querySelector('.arrow');
+                    <!-- Regular FAQs -->
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                How can I become an organ donor through OrgLink?
+                            </button>
+                        </h3>
+                        <div id="faq2" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                To become an organ donor, simply create an account on OrgLink, provide your health information, and indicate your willingness to donate organs. Our platform ensures privacy and security of your data.
+                            </div>
+                        </div>
+                    </div>
 
-  question.addEventListener('click', () => {
-    const isOpen = answer.classList.contains('open');
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                What happens after I register as a donor?
+                            </button>
+                        </h3>
+                        <div id="faq3" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                Once you register, your profile is securely stored. When an organ is needed, OrgLink matches you with potential recipients based on medical compatibility. You will be notified about the process if you’re a match.
+                            </div>
+                        </div>
+                    </div>
 
-    // Close all open answers
-    document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
-    document.querySelectorAll('.arrow').forEach(a => a.classList.remove('open'));
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                Can I choose which organs to donate?
+                            </button>
+                        </h3>
+                        <div id="faq4" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                Yes, you can specify which organs you are willing to donate. You have full control over your donation preferences, and OrgLink ensures your decisions are respected.
+                            </div>
+                        </div>
+                    </div>
 
-    // Toggle current item
-    if (!isOpen) {
-      answer.classList.add('open');
-      arrow.classList.add('open');
-    }
-  });
-});
-      </script>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                How does OrgLink ensure the safety of the donation process?
+                            </button>
+                        </h3>
+                        <div id="faq5" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                OrgLink follows strict ethical and medical guidelines to ensure all donations are made safely and securely. Our platform is transparent and monitors every step of the process to protect both donors and recipients.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   
 </body>
 </html>
