@@ -2,9 +2,12 @@
   /* Section Styles */
   .od-section {
     background: var(--BackgroundColor);
-    padding: 4rem 0;
+    /* padding: 10rem 0; */
+    padding-left: 15px;
+    padding-right: 15px;
+
     min-height: 100vh;
-    margin-top: 100px;
+    margin-top: 250px;
   }
   
   /* Navigation Styles */
@@ -103,7 +106,7 @@
     font-size: 3.5rem;
     margin-bottom: 1.5rem;
     color: var(--PrimaryColor);
-    filter: drop-shadow(0 4px 6px rgba(1, 87, 155, 0.2));
+    /* filter: drop-shadow(0 4px 6px rgba(1, 87, 155, 0.2)); */
     animation: pulseAnimation 3s ease-in-out infinite;
   }
   
@@ -172,7 +175,7 @@
   @media (max-width: 768px) {
     .od-nav__list {
       flex-direction: column; /* Vertical navigation for smaller screens */
-      margin-top: 400px;
+      margin-top: 200px;
     }
   
     .od-nav__link {
@@ -181,6 +184,8 @@
       margin-top: 0px !important;
       display: flex;
       flex-direction: column;
+      display: flex;
+      
     }
   
     .od-filter__input {

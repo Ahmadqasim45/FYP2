@@ -1,11 +1,9 @@
 
 
-.org-about-section-container {
-    /* max-width: 1240px; */
-    /* padding: 0 20px; */
-margin-top: 50px;
-}
 
+.org-about-section-container{
+    padding: 0px 42px;
+}
 .org-about-section-main-heading {
     font-size: 40px;
     font-weight: 800;
@@ -29,8 +27,8 @@ margin-top: 50px;
 }
 
 .org-about-section-icon-circle {
-    width: 48px;
-    height: 48px;
+    width: 30px;
+    height: 30px;
     background-color:var(--PrimaryColor);
     border-radius: 50%;
     display: flex;
@@ -40,8 +38,8 @@ margin-top: 50px;
 }
 
 .org-about-section-icon-circle svg {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     color: white;
 }
 
@@ -93,6 +91,9 @@ margin-top: 50px;
     .org-about-section-image-card {
         height: 320px;
     }
+    .org-about-section-container{
+        padding: 0px 20px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -103,4 +104,24 @@ margin-top: 50px;
     .org-about-section-main-heading {
         font-size: 36px;
     }
+        .org-about-section-section-content h2{
+            font-size: 1.4rem !important;
+        }
+        .org-about-section-icon-circle{
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* padding: 5px; */
+        }
+    
+        .org-about-section-section-item{
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
+            text-align: center;
+        }
 }

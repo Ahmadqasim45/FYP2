@@ -2,7 +2,7 @@
        
 
 .testimonial-section {
-    padding: 40px 0;
+    padding: 0px 30px !important;
     background-color: var(--BackgroundColor);
 }
 
@@ -176,7 +176,7 @@ opacity: 0;
 }
 
 /* Tablet Devices */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     .testimonial-heading {
         font-size: 2rem;
     }
@@ -191,5 +191,16 @@ opacity: 0;
     
     .author-title {
         font-size: 0.9rem;
+    }
+    .quote-icon{
+        font-size: 40px !important;
+        margin-bottom: 10px !important;
+    }
+    .testimonial-heading{
+        font-size: 1.4rem !important;
+    }
+    .video-placeholder{
+        margin-top: 50px;
+        width: 100%;
     }
 }

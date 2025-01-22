@@ -1,0 +1,197 @@
+/* Hero Section Styling */
+.custom-hero-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: left;
+    padding-left: 40px;
+  }
+  
+  /* Headline Section */
+  /* Updated Hero Section Styling */
+  .custom-hero-headline {
+    color: var(--TextColor);
+    padding: 0px;
+    text-align: left; /* Ensures text aligns to the left */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns all content to the left */
+    justify-content: flex-start !important; /* Ensures vertical alignment starts at the top */
+   
+    color: var(--SecondaryColor);
+    /* margin: 20px 0px; */
+  }
+  
+  .custom-hero-subheadline {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: var(--SecondaryColor);
+  
+  }
+  
+  .custom-hero-title {
+    font-size: 3.5em;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 10px 0;
+    color: var(--SecondaryColor);
+    text-transform: capitalize;
+   
+  }
+  
+  
+  
+  
+  
+  .custom-hero-title .highlight {
+    color: var(--AccentColor); /* Applying AccentColor */
+  }
+  
+  
+  /* Image Section */
+  .custom-hero-image {
+    position: relative;
+    min-height: 350px; /* Ensure the height of the section */
+    background-position: center;
+    background-size: 100% 100%;
+    background-image: url(../images/hero\ bg.jpg); /* Ensure correct path */
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
+    z-index: 1; /* Ensure it's under the play button and overlay */
+    pointer-events: none; /* Prevent the background from interfering with clicks */
+    object-fit: cover;
+  }
+  
+  
+  
+  /* Video iframe positioning */
+  .video-overlay iframe {
+    position: absolute;
+    top: 60%;
+    left: 65%;
+    transform: translateX(-10%) translateY(-50%);
+    z-index: 10;
+    width: 50%;
+    max-width: 400px; /* Adjust width of the iframe */
+    height: 300px; /* Adjust height of the iframe */
+    /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.75); */
+    pointer-events: auto; /* Allow interaction with the iframe */
+  }
+  
+  /* Play Button Styles */
+  .video-play-button {
+    position: absolute;
+    z-index: 10; /* Ensure the play button is on top of the background */
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    box-sizing: content-box;
+    display: block;
+    width: 32px;
+    height: 44px;
+    border-radius: 50%;
+    padding: 18px 20px 18px 28px;
+    cursor: pointer !important;
+    pointer-events: auto; /* Ensure button is clickable */
+  }
+  
+  .video-play-button:before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: block;
+    width: 80px;
+    height: 80px;
+    background: var(--PrimaryColor);
+    border-radius: 50%;
+    animation: pulse-border 1500ms ease-out infinite;
+  }
+  
+  .video-play-button:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: block;
+    width: 80px;
+    height: 80px;
+    background: var(--PrimaryColor);
+    border-radius: 50%;
+    transition: all 200ms;
+  }
+  
+  .video-play-button:hover:after {
+    background-color: darken(#fa183d, 10%);
+  }
+  
+  .video-play-button img {
+    position: relative;
+    z-index: 3;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+  }
+  
+  .video-play-button span {
+    display: block;
+    position: relative;
+    z-index: 3;
+    width: 0;
+    height: 0;
+    border-left: 32px solid #fff;
+    border-top: 22px solid transparent;
+    border-bottom: 22px solid transparent;
+  }
+  
+  @keyframes pulse-border {
+    0% {
+      transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+      opacity: 0;
+    }
+  }
+
+  @media screen and (max-width:992px) {
+    .custom-hero-section{
+      padding-left: 30px;
+
+    }
+    .custom-hero-headline{
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+    .custom-hero-image {
+      margin-top: 20px;
+    }
+    
+  }
+
+  @media screen and (max-width:762px){
+    .custom-hero-section{
+      padding-left: 10px;
+      padding-right: 10px;
+
+
+    }
+    .custom-hero-headline{
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+    .custom-hero-image {
+      margin-top: 20px;
+    }
+    .custom-hero-title{
+      text-align: center !important;
+      font-size: 1.3rem !important;
+    }
+  }

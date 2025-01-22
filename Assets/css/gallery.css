@@ -1,15 +1,11 @@
 
 :root {
-    --PrimaryColor: #973131 ;   
-    --SecondaryColor: #292929;
-    --BackgroundColor: white;
-    --TextColor: #434343;
-    --HeadingColor: var(--SecondaryColor);
+    
     --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .gallery {
-    padding: 100px 0;
+    padding: 0px 0;
     background: var(--BackgroundColor);
     min-height: 100vh;
     position: relative;
@@ -172,7 +168,7 @@
     }
     
     .gallery__title {
-        font-size: 40px;
+        font-size: 1.4rem !important;
     }
 }
 
@@ -189,4 +185,5 @@
     .gallery {
         padding: 60px 0;
     }
+  
 }
