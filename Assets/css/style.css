@@ -282,7 +282,7 @@ p {
   flex-direction: column;
   align-items: flex-start; /* Aligns all content to the left */
   justify-content: flex-start; /* Ensures vertical alignment starts at the top */
-  gap: 10px; /* Adds spacing between elements */
+ 
   color: var(--SecondaryColor);
 }
 
@@ -291,20 +291,15 @@ p {
   text-transform: uppercase;
   color: var(--SecondaryColor);
 
-
-
 }
 
 .custom-hero-title {
   font-size: 3.5em;
-  font-weight: bold;
+  font-weight: 900;
   line-height: 1.2;
   margin: 0px 0;
-  color: transparent;
   color: var(--SecondaryColor);
-
-  -webkit-background-clip: text;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 
