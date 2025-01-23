@@ -11,8 +11,9 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 300px !important;
+    height: 400px !important;
     text-align: center !important;
+    overflow: hidden;
     /* background-color: #f7f7f7; Light background for a clean look */
   }
 

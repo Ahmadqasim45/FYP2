@@ -160,8 +160,10 @@
   }
 
   @media screen and (max-width:992px) {
+    
     .custom-hero-section{
       padding-left: 30px;
+    
 
     }
     .custom-hero-headline{
@@ -179,7 +181,11 @@
     .custom-hero-section{
       padding-left: 10px;
       padding-right: 10px;
-
+margin-top: 0px !important;
+display: flex;
+align-items: center;
+justify-content: center;
+height: 250px !important;
 
     }
     .custom-hero-headline{

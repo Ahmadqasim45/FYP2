@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organ Donation - Save Lives</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #973131;
+            --accent-color: #34495e;
+            --text-light: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f4f6f9;
+            color: var(--primary-color);
+            line-height: 1.6;
+        }
+
+        .donation-hero {
+            background: linear-gradient(135deg, rgba(151, 49, 49, 0.9), rgba(44, 62, 80, 0.9)),
+                        url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"%3E%3Cg fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.4"%3E%3Cpath d="M96 95h4v1h-4v4h-1v-4h-9v-1h9v-9h1v9zm-1 0v4h4v-4h-4zm-14-5v-5h-5v5h5zm-1-6h-3v3h3v-3zm-6-3v-5h-5v5h5zm-1-6h-3v3h3v-3zm-6-3v-5h-5v5h5zm-1-6h-3v3h3v-3zm-6-3v-5h-5v5h5zm-1-6h-3v3h3v-3zm-6-3v-5h-5v5h5zm-1-6h-3v3h3v-3zm-6-3v-5h-5v5h5zm-1-6h-3v3h3v-3zm-6-3v-5h-5v5h5zm-1-6h-3v3h3v-3z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+            color: var(--text-light);
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .donation-types {
+            padding: 50px 0;
+            background-color: white;
+        }
+
+        .donation-card {
+            background: white;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .donation-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .donation-card-body {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .donation-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .btn-donate {
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-donate:hover {
+            background: var(--primary-color);
+            transform: scale(1.05);
+        }
+
+        .impact-stats {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .impact-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    <section class="donation-hero">
+        <div class="container">
+            <h1 class="mb-4">Your Donation Can Save Multiple Lives</h1>
+            <p class="lead mb-5">Every organ donation is a second chance at life. Be a hero today.</p>
+        </div>
+    </section>
+
+    <section class="donation-types">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card donation-card">
+                        <div class="donation-card-body">
+                            <div class="donation-icon">🏥</div>
+                            <h4>Deceased Donation</h4>
+                            <p>Continue your legacy by saving lives after death</p>
+                            <button class="btn btn-donate">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card donation-card">
+                        <div class="donation-card-body">
+                            <div class="donation-icon">❤️</div>
+                            <h4>Living Donation</h4>
+                            <p>Give the gift of life while you're alive</p>
+                            <button class="btn btn-donate">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card donation-card">
+                        <div class="donation-card-body">
+                            <div class="donation-icon">💉</div>
+                            <h4>Blood & Tissue</h4>
+                            <p>Small donation, massive impact on medical treatments</p>
+                            <button class="btn btn-donate">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card donation-card">
+                        <div class="donation-card-body">
+                            <div class="donation-icon">💰</div>
+                            <h4>Financial Support</h4>
+                            <p>Support research and patient care programs</p>
+                            <button class="btn btn-donate">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="impact-stats">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="impact-number">120,000+</div>
+                    <p>People Waiting for Organ Transplants</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="impact-number">22</div>
+                    <p>People Die Daily Waiting for Transplants</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="impact-number">1</div>
+                    <p>Donor Can Save Up to 8 Lives</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

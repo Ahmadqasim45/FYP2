@@ -21,10 +21,10 @@
 
 
 :root {
-  --PrimaryColor: #973131 !important; /* Deep Blue for trust and professionalism */
-  --SecondaryColor: #292929 !important; /* Sage Green for life and healing */
-  --BackgroundColor: white !important; /* Off-White for a clean background */
-  --TextColor: #434343; /* Dark gray for readability  text*/
+  --PrimaryColor: #973131 !important; 
+  --SecondaryColor: #292929 !important; 
+  --BackgroundColor: white !important; 
+  --TextColor: #434343; 
   --HeadingColor: var(--SecondaryColor); 
   --primary-font-family: 'Poppins', sans-serif;
   --secondary-font-family: 'Roboto', sans-serif;
@@ -97,7 +97,7 @@ p {
 }
 
 .set-alignment-container{
-  margin-top: 150px;
+  margin-top: 70px;
 }
 .align-ment-horizontal{
   padding: 0px 43px;

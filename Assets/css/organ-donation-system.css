@@ -39,7 +39,7 @@
     }
 
     .section-title {
-        font-size: 48px;
+        font-size: 30px !important ;
         font-weight: 700;
         line-height: 1.2;
         margin-bottom: 24px;
